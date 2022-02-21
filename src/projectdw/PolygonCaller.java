@@ -74,6 +74,7 @@ public class PolygonCaller {
     public String restCallInfoStocks() throws IOException{
         String url=null;
         //"https://api.polygon.io/v3/reference/tickers/AAPL?apiKey=O7iAXX5ZoaqaMqOzyHA4RPq8LfFw8olK"
+        url="https://api.polygon.io/v3/reference/tickers/"+this.stocksTicker+"?apiKey="+this.APIKeyLog;
         return this.restCall(url);
     }
     
