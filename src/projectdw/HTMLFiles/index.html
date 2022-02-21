@@ -8,41 +8,72 @@
 </head>
 
 <body>
-
-    <body>
-        <div class="flex">
-            <div class="BoxSfondo flex">
-                <div class="BoxTemperatura"><b>TEMPERATURA</b></div>
-                <div class="BoxUnitaDiMisura"><b>Unità di misura - Gradi</b></div>
-
-                <div class="BoxTemperaturaDesiderata">
-                    <p>Insererire Temperatura<br>
-                        <input type="number" id="temp">
-                    </p>
-                </div>
-
-                <div class="BoxConverti item">
-                    <p><b>Converti in</b></p>
-                </div>
-
-                <div class="BoxElenco item">
-                    <select>
-                        <option value="scegli">Scegli</option>
-                        <option value="fahrenheit" id="a">Fahrenheit</option>
-                        <option value="celsius" id="b">Celsius</option>
-                    </select>
-                </div>
-
-                <div class="risultato item">
-                    <input type="button" id="Calcolo" value="Calcola" onclick="calcolo()">
-                    <input type="reset" value="Reset">
-                    <p id="risultato item">Risultato:</p>
-                </div>
-            </div>
-
+    <div id="header">
+        <!-- <div id="menu">
             <div class="img">
-                <img src="immagine.jpg" height="450" width="140" />
+                <a href="index.html"><img src="img/logo.png" alt="Logo Azienda" height="150" width="150"
+                        style="cursor:pointer" /></a>
             </div>
-    </body>
+            <li><a href="index.html" id="navbar">HOME</a></li>
+            <li><a href="index.html" id="navbar">CHART</a></li>
+        </div> -->
+
+        <div class="img">
+            <a href="index.html"><img src="img/logo.png" alt="Logo Azienda" height="150" width="150"
+                    style="cursor:pointer" /></a>
+        </div>
+
+        <nav class="mynav">
+
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.html">CHART</a></li>
+            </ul>
+        </nav>
+        <span class="target"></span>
+
+    </div>
+
+    <!-- BOX VARI -->
+
+    <div class="boxGraficoUno">
+        <img src="img/graficoUno.png" alt="Grafico Uno" height="360" width="720" />
+        <p><b>Grafico 1:</b> descrizione ...</p>
+        <h4>Il grafico rappresenta solo un'idea di come verrà il risultato finito. </h4>
+    </div>
+
+    <div class="boxGraficoDue">
+        <img src="img/graficoDue.jfif" alt="Grafico Due" height="360" width="720" />
+        <p><b>Grafico 2:</b> descrizione ...</p>
+        <h4>Il grafico rappresenta solo un'idea di come verrà il risultato finito. </h4>
+    </div>
+
+    <div id="informazioni">
+        <div class="boxScritto">
+            <h4>AAPL<br>
+                Nasdaq Global Select<br>
+                Apple Inc.<br>
+                1 Infinite Loop Cupertino CA, 95014<br>
+                USA</h4>
+            <br>
+            <hr><br>
+
+            <h5>Apple Inc is designs, manufactures and markets mobile communication and media <br>
+                devices and personal computers, and sells a variety of related software, services, <br>
+                accessories, networking solutions and third-party digital content and applications.</h5>
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <div id="footer">
+        <div class="imgFooter">
+            <img src="img/logo.png" alt="Logo Azienda" height="120" width="120" />
+        </div>
+        <div id="copyright">
+            <h3>Copyright © 2022 AEGA Studios. Tutti i diritti riservati.</h3>
+        </div>
+    </div>
+</body>
 
 </html>
