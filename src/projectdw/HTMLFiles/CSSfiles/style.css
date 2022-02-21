@@ -1,9 +1,124 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
-*/
-/* 
-    Created on : 20-feb-2022, 17.04.03
-    Author     : USER
-*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            font: 16px/28px;
+            height: auto;
+            width: auto;
+            line-height: 22px;
+            padding-bottom: 100px;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #header {
+            background: #e5e5e5;
+            height: 270px;
+        }
+
+        #menu {
+            color: whitesmoke;
+            text-align: center;
+            height: 90px;
+            padding-top: 30px;
+            padding-right: 100px;
+        }
+
+        #menu li {
+            list-style-type: none;
+            display: inline-block;
+            font-size: 20px;
+        }
+
+        #menu #navbar {
+            color: #292d33;
+            padding: 15px 20px;
+            display: inline-block;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        #menu #navbar:hover {
+            background: #292d33;
+            color: white;
+            cursor: pointer;
+        } */
+
+        #informazioni {
+            margin-top: 40px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            width: 700px;
+            height: 400px;
+            background-color: #124782fa;
+            float: right;
+            position: relative;
+            right: 40px;
+        }
+
+        #footer {
+            background: #e5e5e5;
+            position: absolute;
+            height: 170px;
+            bottom: 0;
+            width: 100%;
+            padding-top: 0px;
+        }
+
+        #copyright {
+            text-align: center;
+            padding-top: 80px;
+            font-family: "Poppins", sans-serif;
+            color: #292d33;
+        }
+
+        .boxScritto {
+            text-align: center;
+            color: #e5e5e5;
+        }
+
+        .boxGraficoUno {
+            padding-left: 40px;
+            padding-top: 40px;
+            text-align: center;
+            width: auto;
+            height: auto;
+            float: left;
+            left: 40px;
+        }
+
+        .boxGraficoDue {
+            padding-left: 80px;
+            padding-top: 40px;
+            text-align: center;
+            width: auto;
+            height: auto;
+            float: left;
+        }
+
+        .img {
+            padding-top: 20px;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        .imgFooter {
+            padding-top: 25px;
+            padding-left: 60px;
+            padding-right: 25px;
+            float: left;
+        }

@@ -1,15 +1,48 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
 <html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
+
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
     <body>
-        <div>provacpmit</div>
+        <div class="flex">
+            <div class="BoxSfondo flex">
+                <div class="BoxTemperatura"><b>TEMPERATURA</b></div>
+                <div class="BoxUnitaDiMisura"><b>Unità di misura - Gradi</b></div>
+
+                <div class="BoxTemperaturaDesiderata">
+                    <p>Insererire Temperatura<br>
+                        <input type="number" id="temp">
+                    </p>
+                </div>
+
+                <div class="BoxConverti item">
+                    <p><b>Converti in</b></p>
+                </div>
+
+                <div class="BoxElenco item">
+                    <select>
+                        <option value="scegli">Scegli</option>
+                        <option value="fahrenheit" id="a">Fahrenheit</option>
+                        <option value="celsius" id="b">Celsius</option>
+                    </select>
+                </div>
+
+                <div class="risultato item">
+                    <input type="button" id="Calcolo" value="Calcola" onclick="calcolo()">
+                    <input type="reset" value="Reset">
+                    <p id="risultato item">Risultato:</p>
+                </div>
+            </div>
+
+            <div class="img">
+                <img src="immagine.jpg" height="450" width="140" />
+            </div>
     </body>
+
 </html>
