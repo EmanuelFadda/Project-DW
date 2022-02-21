@@ -66,9 +66,8 @@ public class PolygonCaller { //classe che attraverso i dati presi dal sito nella
     }
 
     public String restCallDataStocks() throws IOException{ //ottenimento dei dati del periodo selezionato del titolo borsistico richiesto
-        String url="https://api.polygon.io/v2/aggs/ticker/"+this.stocksTicker+"/range/1/day/"+this.start+"/"+this.end+"?apiKey="+this.APIKeyLog;
-        System.out.println(url);
-        //https://api.polygon.io/v2/aggs/ticker/AAPL/range/1/day/2020-06-01/2020-06-17?apiKey=O7iAXX5ZoaqaMqOzyHA4RPq8LfFw8olK
+        String url="https://api.polygon.io/v2/aggs/ticker/"+this.stocksTicker+"/range/1/day/"+this.modifyStringDate(this.start)+"/"+this.modifyStringDate(this.end)+"?apiKey="+this.APIKeyLog;
+ 
         return this.restCall(url);
     }
     public String restCallInfoStocks() throws IOException{ //ottenimento dei dati del titolo borsistico scelto
@@ -77,5 +76,10 @@ public class PolygonCaller { //classe che attraverso i dati presi dal sito nella
         url="https://api.polygon.io/v3/reference/tickers/"+this.stocksTicker+"?apiKey="+this.APIKeyLog;
         return this.restCall(url);
     }
-    
+    private String modifyStringDate(String wrongData){
+        String year=new String(wrongData.substring(6,10));
+        String month=new String(wrongData.substring(3,5));
+        String day= new String(wrongData.substring(0,2));
+        return year+"-"+month+"-"+day;
+    }
 }
