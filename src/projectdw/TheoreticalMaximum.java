@@ -14,10 +14,18 @@ import java.util.ArrayList;
 public class TheoreticalMaximum {
     private ArrayList<Day> arDays;
 
+    /**
+     * Costruttore che inizializza l'ArrayList
+     * @param arDays 
+     */
     public TheoreticalMaximum(ArrayList<Day> arDays) {
         this.arDays = arDays;
     }
 
+    /**
+     * Utilizzo di un ciclo for per sommare ad una variabile locale la differenza tra il prezzo più alto e quello più basso
+     * @return la variabile locale che contiene il risultato del massimo teorico realizzabile
+     */
     public int getTheoreticalMaximum(){
         int result = 0;
         for(int i = 0; i < arDays.size(); i++){
