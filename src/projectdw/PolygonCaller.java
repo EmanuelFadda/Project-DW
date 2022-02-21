@@ -15,11 +15,11 @@ import java.net.URL;
  *
  * @author USER
  */
-public class PolygonCaller {
-    private String APIKeyLog;
-    private String stocksTicker;
-    private String start;
-    private String end;
+public class PolygonCaller { //classe che attraverso i dati presi dal sito nella classe InputSite può elaborare un link per effettuare le richieste precise
+    private String APIKeyLog; //key dell'API
+    private String stocksTicker; //nome del titolo
+    private String start; // data inizio
+    private String end; // data fine
 
     public PolygonCaller(String APIKeyLog, String stocksTicker, String start, String end) {
         this.APIKeyLog = APIKeyLog;
@@ -48,7 +48,7 @@ public class PolygonCaller {
         this.end = end;
     }
     
-    public String restCall(String link) throws MalformedURLException, IOException{
+    public String restCall(String link) throws MalformedURLException, IOException{ //metodo che attraverso il link ti effettua la chiamata rest
         URL url = new URL(link); //prende l'url
         HttpURLConnection conn = (HttpURLConnection) url.openConnection(); 
         conn.setRequestMethod("GET"); //setta il tipo della chiamata, in questo caso "get"
@@ -65,13 +65,13 @@ public class PolygonCaller {
         return output;
     }
 
-    public String restCallDataStocks() throws IOException{
+    public String restCallDataStocks() throws IOException{ //ottenimento dei dati del periodo selezionato del titolo borsistico richiesto
         String url="https://api.polygon.io/v2/aggs/ticker/"+this.stocksTicker+"/range/1/day/"+this.start+"/"+this.end+"?apiKey="+this.APIKeyLog;
         System.out.println(url);
-        ///https://api.polygon.io/v2/aggs/ticker/AAPL/range/1/day/2020-06-01/2020-06-17?apiKey=O7iAXX5ZoaqaMqOzyHA4RPq8LfFw8olK
+        //https://api.polygon.io/v2/aggs/ticker/AAPL/range/1/day/2020-06-01/2020-06-17?apiKey=O7iAXX5ZoaqaMqOzyHA4RPq8LfFw8olK
         return this.restCall(url);
     }
-    public String restCallInfoStocks() throws IOException{
+    public String restCallInfoStocks() throws IOException{ //ottenimento dei dati del titolo borsistico scelto
         String url=null;
         //"https://api.polygon.io/v3/reference/tickers/AAPL?apiKey=O7iAXX5ZoaqaMqOzyHA4RPq8LfFw8olK"
         url="https://api.polygon.io/v3/reference/tickers/"+this.stocksTicker+"?apiKey="+this.APIKeyLog;

@@ -15,7 +15,7 @@ import java.net.URL;
  *
  * @author USER
  */
-public class InputSite {
+public class InputSite { //Classe volta alla richiesta dei parametri (dal sito di Torricelli ) per una soccessiva richiesta a Polygon
     private String siteInput;
 
     public InputSite(String siteInput) {
@@ -30,7 +30,7 @@ public class InputSite {
         this.siteInput = siteInput;
     }
     
-    public String restCall() throws MalformedURLException, IOException{
+    public String restCall() throws MalformedURLException, IOException{ //effettua la chiamata rest
         URL url = new URL(this.getSiteInput()); //prende l'url
         HttpURLConnection conn = (HttpURLConnection) url.openConnection(); 
         conn.setRequestMethod("GET"); //setta il tipo della chiamata, in questo caso "get"
