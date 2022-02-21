@@ -19,7 +19,7 @@ public class ProjectDW {
     public static void main(String[] args) throws IOException {
        /*InputSite inputSite=new InputSite("https://dwweb.gnet.it/dw2022/");
        System.out.println(inputSite.restCall());*/
-       PolygonCaller pCaller= new PolygonCaller("O7iAXX5ZoaqaMqOzyHA4RPq8LfFw8olK","MSFT","2021-12-01","2021-12-31");
+       PolygonCaller pCaller= new PolygonCaller("O7iAXX5ZoaqaMqOzyHA4RPq8LfFw8olK","AAPL","2021-12-01","2021-12-31");
        System.out.println(pCaller.restCallDataStocks());
        System.out.println(pCaller.restCallInfoStocks());
     }
