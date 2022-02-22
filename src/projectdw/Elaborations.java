@@ -18,6 +18,11 @@ public class Elaborations {
     public Elaborations(ArrayList<Day> arDays) {
         this.arDays = arDays;
     }
+
+    @Override
+    public String toString() {
+        return "Elaborations{" + "arDays=" + arDays + '}';
+    }
     
     /**
      * I use a for loop to add the difference between the highest and lowest price to a local variable
