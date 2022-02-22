@@ -15,7 +15,7 @@ public class TheoreticalMaximum {
     private ArrayList<Day> arDays;
 
     /**
-     * Costruttore che inizializza l'ArrayList
+     * Constructor that initializes the ArrayList
      * @param arDays 
      */
     public TheoreticalMaximum(ArrayList<Day> arDays) {
@@ -23,8 +23,8 @@ public class TheoreticalMaximum {
     }
 
     /**
-     * Utilizzo di un ciclo for per sommare ad una variabile locale la differenza tra il prezzo più alto e quello più basso
-     * @return la variabile locale che contiene il risultato del massimo teorico realizzabile
+     * Using a for loop to add the difference between the highest and lowest price to a local variable
+     * @return the local variable that contains the result of the theoretical maximum achievable
      */
     public int getTheoreticalMaximum(){
         int result = 0;
