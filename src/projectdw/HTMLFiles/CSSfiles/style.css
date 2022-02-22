@@ -7,17 +7,18 @@
             text-decoration: none;
             box-sizing: border-box;
         }
-
+        
         body {
             margin: 0;
             padding: 0;
             background: #ffffff;
             font: 16px/28px;
-            height: auto;
-            width: auto;
             line-height: 22px;
             padding-bottom: 100px;
             font-family: "Poppins", sans-serif;
+            width: 2560px;
+            height: autos;
+
         }
 
         .flex {
@@ -28,6 +29,7 @@
         #header {
             background: #e5e5e5;
             height: 270px;
+            width: 100%;
         }
 
         #menu {
@@ -67,7 +69,7 @@
             background-color: #124782fa;
             float: right;
             position: relative;
-            right: 40px;
+            right: 80px;
         }
 
         #footer {
@@ -77,6 +79,11 @@
             bottom: 0;
             width: 100%;
             padding-top: 0px;
+            width: 2560px;
+        }
+
+        #wrap {
+            width:1000px;
         }
 
         #copyright {
@@ -92,7 +99,7 @@
         }
 
         .boxGraficoUno {
-            padding-left: 40px;
+            padding-left: 80px;
             padding-top: 40px;
             text-align: center;
             width: auto;
