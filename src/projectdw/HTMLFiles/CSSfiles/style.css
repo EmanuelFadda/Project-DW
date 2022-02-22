@@ -23,8 +23,12 @@
         #header {
             background: #e5e5e5;
             width: 100%;
-            height: 20%;
+            height: 10%;
         }
+
+        /*#navbar{
+            margin-top: 200%;
+        }*/
 
         #menu {
             color: whitesmoke;
@@ -40,7 +44,7 @@
             font-size: 20px;
         }
 
-        #menu #navbar {
+        #menu #navbar{
             color: #292d33;
             padding: 15px 20px;
             display: inline-block;
@@ -54,9 +58,10 @@
             cursor: pointer;
         }
 
-        /*.imgLogo{
-            position: relative;
-        }*/
+        .imgLogo{
+            max-width: 100%;
+            height: auto;
+        }
 
         #center{
             width: 100%;
@@ -91,26 +96,39 @@
             position: sticky;
         }
 
-        #graphics{
-            width: 90%;
+        .column{
+            float: left;
+            width: 50%;
+            padding: 10px;
             height: 60%;
-            /*margin-left: 5%;
-            margin-right: 5%;
-            width: 200px;
-            height: 200px;*/
-            background: #25FF00;
-            /*margin: 0 auto;
-            padding-left: 50px;*/
-            margin-left: auto;
-            margin-right: auto;
+        }
+
+        .calculusColumn{
+            float: left;
+            width: 33%;
+            padding: 10px;
+            height: 60%;
+        }
+
+        .row:after{
+            content: "";
+            display: table;
+            clear: both;
         }
 
         #elaborations{
             width: 90%;
-            height: 40%;
+            height: auto;
         }
 
-        .boxGraficoUno {
+        .text{
+            border: 2px solid #a41622;
+            border-radius: 3px;
+            text-align: center;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        /*.boxGraficoUno {
             padding-left: 80px;
             padding-top: 40px;
             float: left;
@@ -121,12 +139,14 @@
             padding-left: 80px;
             padding-top: 40px;
             float: left;
-        }
+        }*/
 
         .boxScritto {
             text-align: center;
             color: #e5e5e5;
             margin-top: 10px;
+            background-color: #a41622;
+            height: 10%;
         }
 
         .img {
@@ -153,3 +173,5 @@
             position: relative;
             left: 80px;
         }
+
+        
