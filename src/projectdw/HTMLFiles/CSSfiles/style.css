@@ -17,7 +17,8 @@
             padding-bottom: 100px;
             font-family: "Poppins", sans-serif;
             width: 2560px;
-            height: autos;
+            height: auto;
+            position: absolute;
 
         }
 
@@ -64,7 +65,7 @@
             margin-top: 40px;
             padding-top: 50px;
             padding-bottom: 50px;
-            width: 700px;
+            width: 800px;
             height: 400px;
             background-color: #124782fa;
             float: right;
@@ -74,7 +75,6 @@
 
         #footer {
             background: #e5e5e5;
-            position: absolute;
             height: 170px;
             bottom: 0;
             width: 100%;
@@ -128,4 +128,16 @@
             padding-left: 60px;
             padding-right: 25px;
             float: left;
+        }
+
+        #boxCalcoli {
+            margin-top: 600px;
+            padding-left: 80px;
+            padding-top: 40px;
+            text-align: center;
+            width: auto;
+            height: 300px;
+            float: center;
+            position: relative;
+            left: 80px;
         }
