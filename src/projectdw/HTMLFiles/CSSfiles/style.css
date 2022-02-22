@@ -92,17 +92,16 @@
             position: sticky;
         }
 
-        .boxScritto {
-            text-align: center;
-            color: #e5e5e5;
+        #graphics{
+            width: 80%;
+            height: 60%;
+            margin-left: 5%;
+            margin-right: 5%;
         }
 
         .boxGraficoUno {
             padding-left: 80px;
             padding-top: 40px;
-            text-align: center;
-            width: auto;
-            height: auto;
             float: left;
             left: 40px;
         }
@@ -110,16 +109,18 @@
         .boxGraficoDue {
             padding-left: 80px;
             padding-top: 40px;
-            text-align: center;
-            width: auto;
-            height: auto;
-            float: left;
         }
 
-        .img {
+        .boxScritto {
+            text-align: center;
+            color: #e5e5e5;
+        }
+
+        .navbar {
             padding-top: 0px;
             text-align: center;
             padding-bottom: 10px;
+            position:fixed;
         }
 
         /*.imgFooter {
