@@ -16,20 +16,23 @@
             line-height: 22px;
             padding-bottom: 100px;
             font-family: "Poppins", sans-serif;
-            width: 2560px;
-            height: auto;
-            position: absolute;
-
+            width: 100%;
+            height: 100%;
         }
 
         .flex {
             display: flex;
             flex-wrap: wrap;
         }
+        
+        #container{
+            width: 100%;
+            height: 100vh;
+        }
 
         #header {
             background: #e5e5e5;
-            height: 270px;
+            height: 230px;
             width: 100%;
         }
 
@@ -37,8 +40,13 @@
             color: whitesmoke;
             text-align: center;
             height: 90px;
-            padding-top: 30px;
+            padding-top: 10px;
             padding-right: 100px;
+        }
+
+        #menu img {
+            text-align: center;
+            margin-top: 5px;
         }
 
         #menu li {
@@ -79,7 +87,7 @@
             bottom: 0;
             width: 100%;
             padding-top: 0px;
-            width: 2560px;
+            width: 100%;
         }
 
         #wrap {
@@ -118,7 +126,7 @@
         }
 
         .img {
-            padding-top: 20px;
+            padding-top: 0px;
             text-align: center;
             padding-bottom: 10px;
         }
