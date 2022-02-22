@@ -12,6 +12,7 @@ package projectdw;
 public class Day {
     private double c;//close prize
     private double h;//highest prize
+<<<<<<< HEAD
     private double l; //lowest prize
     private double o; // open priza
 
@@ -19,13 +20,15 @@ public class Day {
     public String toString() {
         return "Day{" + "c=" + c + ", h=" + h + ", l=" + l + ", o=" + o + '}';
     }
+=======
+    private double l;//lowest prize
+    private double o;//open priza
+>>>>>>> 9501c81181ca2dd9fff02803df8309ab4213f261
 
     public double getClosePrice() {
         return c;
     }
-
-  
-
+    
     public double getHighestPrice() {
         return h;
     }
@@ -34,14 +37,15 @@ public class Day {
         return l;
     }
 
-
-
     public double getOpenPrice() {
         return o;
     }
 
- 
-    
-
-    
+    /**
+     * Metodo utile per il debug
+     * @return informazioni del giorno
+     */
+    public String toString() {
+        return "Day:\n" + " c = " + this.getClosePrice() + "\n h = " + this.getHighestPrice() + "\n l = " + this.getHighestPrice() + "\n o = " + this.getOpenPrice();
+    }
 }
