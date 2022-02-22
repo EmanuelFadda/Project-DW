@@ -36,7 +36,7 @@ public class Elaborations {
      * @return whether he has gained or lost
      */
     public int getHowMuch(){
-        int result = arDays.get(arDays.size()-1).getClosePrice() - arDays.get(0).getOpenPrice();
+        int result = (int) (arDays.get(arDays.size()-1).getClosePrice() - arDays.get(0).getOpenPrice());
         return result;
     }
     

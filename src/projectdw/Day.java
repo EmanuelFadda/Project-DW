@@ -10,13 +10,13 @@ package projectdw;
  * @author difin
  */
 public class Day {
-    private int closePrice;
-    private int highestPrice;
-    private int lowestPrice;
-    private int numberOfTransactions;
-    private int openPrice;
+    private double closePrice;
+    private double highestPrice;
+    private double lowestPrice;
+    private double numberOfTransactions;
+    private double openPrice;
     private int timestamp;
-    private int tradingVolume;
+    private double tradingVolume;
     private double volumeWeighted;
 
     /**
@@ -30,7 +30,7 @@ public class Day {
      * @param tradingVolume
      * @param volumeWeighted 
      */
-    public Day(int closePrice, int highestPrice, int lowestPrice, int numberOfTransactions, int openPrice, int timestamp, int tradingVolume, double volumeWeighted) {
+    public Day(double closePrice, double highestPrice, double lowestPrice, double numberOfTransactions, double openPrice, int timestamp, double tradingVolume, double volumeWeighted) {    
         this.closePrice = closePrice;
         this.highestPrice = highestPrice;
         this.lowestPrice = lowestPrice;
@@ -48,43 +48,43 @@ public class Day {
         this(0,0,0,0,0,0,0,0);
     }
 
-    public int getClosePrice() {
+    public double getClosePrice() {
         return closePrice;
     }
 
-    public void setClosePrice(int closePrice) {
+    public void setClosePrice(double closePrice) {
         this.closePrice = closePrice;
     }
 
-    public int getHighestPrice() {
+    public double getHighestPrice() {
         return highestPrice;
     }
 
-    public void setHighestPrice(int highestPrice) {
+    public void setHighestPrice(double highestPrice) {
         this.highestPrice = highestPrice;
     }
 
-    public int getLowestPrice() {
+    public double getLowestPrice() {
         return lowestPrice;
     }
 
-    public void setLowestPrice(int lowestPrice) {
+    public void setLowestPrice(double lowestPrice) {
         this.lowestPrice = lowestPrice;
     }
 
-    public int getNumberOfTransactions() {
+    public double getNumberOfTransactions() {
         return numberOfTransactions;
     }
 
-    public void setNumberOfTransactions(int numberOfTransactions) {
+    public void setNumberOfTransactions(double numberOfTransactions) {
         this.numberOfTransactions = numberOfTransactions;
     }
 
-    public int getOpenPrice() {
+    public double getOpenPrice() {
         return openPrice;
     }
 
-    public void setOpenPrice(int openPrice) {
+    public void setOpenPrice(double openPrice) {
         this.openPrice = openPrice;
     }
 
@@ -96,11 +96,11 @@ public class Day {
         this.timestamp = timestamp;
     }
 
-    public int getTradingVolume() {
+    public double getTradingVolume() {
         return tradingVolume;
     }
 
-    public void setTradingVolume(int tradingVolume) {
+    public void setTradingVolume(double tradingVolume) {
         this.tradingVolume = tradingVolume;
     }
 
@@ -110,13 +110,13 @@ public class Day {
 
     public void setVolumeWeighted(double volumeWeighted) {
         this.volumeWeighted = volumeWeighted;
-    }   
+    }
 
     /**
      * I print and view the information relating to the 'Day'
      * @return attributes of the day
      */
     public String toString() {
-        return "Day:\n" + " - Close Price = " + this.getClosePrice() + "\n - Highest Price = " + this.getHighestPrice() + "\n - Lowest Price = " + this.getLowestPrice() + "\n - Number Of Transactions = " + this.getNumberOfTransactions() + "\n - Open Price = " + this.getOpenPrice() + "\n - Time Stamp = " + this.getTimestamp() + "\n - Trading Volume = " + this.getTradingVolume() + "\n - Volume Weighted = " + this.getVolumeWeighted();
+        return "\nDay:\n" + " - Close Price = " + this.getClosePrice() + "\n - Highest Price = " + this.getHighestPrice() + "\n - Lowest Price = " + this.getLowestPrice() + "\n - Number Of Transactions = " + this.getNumberOfTransactions() + "\n - Open Price = " + this.getOpenPrice() + "\n - Time Stamp = " + this.getTimestamp() + "\n - Trading Volume = " + this.getTradingVolume() + "\n - Volume Weighted = " + this.getVolumeWeighted();
     }
 }
