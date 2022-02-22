@@ -9,34 +9,28 @@
         }
         
         body {
-            margin: 0;
-            padding: 0;
             background: #ffffff;
-            font: 16px/28px;
-            line-height: 22px;
-            padding-bottom: 100px;
+            font: 16px;
             font-family: "Poppins", sans-serif;
-            width: 2560px;
-            height: autos;
-
+            width: 100%;
         }
-
-        .flex {
-            display: flex;
-            flex-wrap: wrap;
+        
+        #container{
+            width: 100%;
+            height: 100vh;
         }
 
         #header {
             background: #e5e5e5;
-            height: 270px;
             width: 100%;
+            height: 20%;
         }
 
         #menu {
             color: whitesmoke;
             text-align: center;
             height: 90px;
-            padding-top: 30px;
+            padding-top: 10px;
             padding-right: 100px;
         }
 
@@ -60,50 +54,65 @@
             cursor: pointer;
         }
 
+        /*.imgLogo{
+            position: relative;
+        }*/
+
+        #center{
+            width: 100%;
+            height: 70%;
+            position: static;
+        }
+
         #informazioni {
             margin-top: 40px;
             padding-top: 50px;
+            margin-left: 60px;
             padding-bottom: 50px;
-            width: 700px;
-            height: 400px;
-            background-color: #124782fa;
-            float: right;
+            width: 800px;
+            height: 360px;
+            background-color: #a41622;
+            float: left;
             position: relative;
-            right: 80px;
         }
 
         #footer {
             background: #e5e5e5;
-            position: absolute;
-            height: 170px;
+            height: 10%;
             bottom: 0;
             width: 100%;
             padding-top: 0px;
-            width: 2560px;
-        }
-
-        #wrap {
-            width:1000px;
+            width: 100%;
         }
 
         #copyright {
             text-align: center;
-            padding-top: 80px;
-            font-family: "Poppins", sans-serif;
             color: #292d33;
+            position: sticky;
         }
 
-        .boxScritto {
-            text-align: center;
-            color: #e5e5e5;
+        #graphics{
+            width: 90%;
+            height: 60%;
+            /*margin-left: 5%;
+            margin-right: 5%;
+            width: 200px;
+            height: 200px;*/
+            background: #25FF00;
+            /*margin: 0 auto;
+            padding-left: 50px;*/
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #elaborations{
+            width: 90%;
+            height: 40%;
         }
 
         .boxGraficoUno {
             padding-left: 80px;
             padding-top: 40px;
-            text-align: center;
-            width: auto;
-            height: auto;
             float: left;
             left: 40px;
         }
@@ -111,21 +120,36 @@
         .boxGraficoDue {
             padding-left: 80px;
             padding-top: 40px;
-            text-align: center;
-            width: auto;
-            height: auto;
             float: left;
         }
 
+        .boxScritto {
+            text-align: center;
+            color: #e5e5e5;
+            margin-top: 10px;
+        }
+
         .img {
-            padding-top: 20px;
             text-align: center;
             padding-bottom: 10px;
         }
 
-        .imgFooter {
+        /*.imgFooter {
             padding-top: 25px;
             padding-left: 60px;
             padding-right: 25px;
             float: left;
+            vertical-align: center;
+        }*/
+
+        #boxCalcoli {
+            margin-top: 600px;
+            padding-left: 80px;
+            padding-top: 40px;
+            text-align: center;
+            width: auto;
+            height: 300px;
+            float: center;
+            position: relative;
+            left: 80px;
         }

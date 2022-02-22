@@ -2,9 +2,17 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
+        <group/>
+=======
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/USER/Desktop/4AIA/Informatica/Developer%20week/projectdw/src/projectdw/OutputDataHTML.java</file>
             <file>file:/C:/Users/USER/Desktop/4AIA/Informatica/Developer%20week/projectdw/src/projectdw/HTMLLoader.java</file>
+=======
+            <file>file:/C:/Users/alexb/Documents/Progetto%20DW/projectdw/src/projectdw/Day.java</file>
+>>>>>>> 8338ec18b2e49f03fd553f16647d07191514592b
         </group>
+>>>>>>> 449164d2fe9a564dcb1ce82df10fc50554588596
     </open-files>
 </project-private>
