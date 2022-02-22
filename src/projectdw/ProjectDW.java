@@ -25,9 +25,11 @@ public class ProjectDW {
        /*System.out.println(pCaller.restCallDataStocks());
        System.out.println(pCaller.restCallInfoStocks());*/
        //System.out.println(pCaller.restCallDataStocks());
-         String str=pCaller.restCallDataStocks();
-         Elaborations elaborations=g.fromJson(str, Elaborations.class);
-        System.out.println(elaborations);
+         String str=pCaller.restCallInfoStocks();
+         System.out.println(pCaller.restCallInfoStocks());
+         InfoStock infoStock=g.fromJson(str, InfoStock.class);
+         
+        System.out.println(infoStock);
     }
     
 }

@@ -72,8 +72,8 @@ public class PolygonCaller { // class that through the data taken from the site 
     }
     public String restCallInfoStocks() throws IOException{ // obtaining the data of the chosen stock market
         String url=null;
-        //"https://api.polygon.io/v3/reference/tickers/AAPL?apiKey=O7iAXX5ZoaqaMqOzyHA4RPq8LfFw8olK"
-        url="https://api.polygon.io/v3/reference/tickers/"+this.stocksTicker+"?apiKey="+this.APIKeyLog;
+       // url="https://api.polygon.io/v1/meta/symbols/AAPL/company?apiKey=O7iAXX5ZoaqaMqOzyHA4RPq8LfFw8olK";
+        url="https://api.polygon.io/v1/meta/symbols/"+this.stocksTicker+"/company?apiKey="+this.APIKeyLog;
         return this.restCall(url);
     }
     private String modifyStringDate(String wrongData){ // converts the dates taken from torricelli site into strings suitable for the use of the polygon API
