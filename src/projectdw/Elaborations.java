@@ -31,7 +31,7 @@ public class Elaborations {
     public int getTheoreticalMaximum(){
         int result = 0;
         for(int i = 0; i < arDays.size(); i++){
-            result += arDays.get(i).getHighestPrice()- arDays.get(i).getLowestPrice(); 
+            result += arDays.get(i).getHighestPrice()- arDays.get(i).getLowestPrice();
         }
         return result;
     }
