@@ -30,13 +30,8 @@ public class Elaborations {
      */
     public int getTheoreticalMaximum(){
         int result = 0;
-<<<<<<< HEAD
         for(int i = 0; i < results.size(); i++){
             result += results.get(i).getHighestPrice()- results.get(i).getLowestPrice(); 
-=======
-        for(int i = 0; i < arDays.size(); i++){
-            result += arDays.get(i).getHighestPrice()- arDays.get(i).getLowestPrice();
->>>>>>> 9501c81181ca2dd9fff02803df8309ab4213f261
         }
         return result;
     }

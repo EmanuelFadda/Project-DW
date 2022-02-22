@@ -12,18 +12,8 @@ package projectdw;
 public class Day {
     private double c;//close prize
     private double h;//highest prize
-<<<<<<< HEAD
-    private double l; //lowest prize
-    private double o; // open priza
-
-    @Override
-    public String toString() {
-        return "Day{" + "c=" + c + ", h=" + h + ", l=" + l + ", o=" + o + '}';
-    }
-=======
     private double l;//lowest prize
     private double o;//open priza
->>>>>>> 9501c81181ca2dd9fff02803df8309ab4213f261
 
     public double getClosePrice() {
         return c;
