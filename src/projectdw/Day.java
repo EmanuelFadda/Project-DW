@@ -13,7 +13,7 @@ public class Day {
     private double c;//close prize
     private double h;//highest prize
     private double l; //lowest prize
-    private double o;// open priza
+    private double o; // open priza
 
     @Override
     public String toString() {
@@ -30,7 +30,7 @@ public class Day {
         return h;
     }
 
-    public double getLowestPric() {
+    public double getLowestPrice() {
         return l;
     }
 

@@ -13,15 +13,15 @@ import java.util.HashMap;
  * @author difin
  */
 public class Elaborations {
-    private ArrayList<Day> arDays;
+    private ArrayList<Day> results;
 
     public Elaborations(ArrayList<Day> arDays) {
-        this.arDays = arDays;
+        this.results = arDays;
     }
 
     @Override
     public String toString() {
-        return "Elaborations{" + "arDays=" + arDays + '}';
+        return "Elaborations{" + "results=" + results + '}';
     }
     
     /**
@@ -30,8 +30,8 @@ public class Elaborations {
      */
     public int getTheoreticalMaximum(){
         int result = 0;
-        for(int i = 0; i < arDays.size(); i++){
-            result += arDays.get(i).getHighestPrice()- arDays.get(i).getLowestPrice(); 
+        for(int i = 0; i < results.size(); i++){
+            result += results.get(i).getHighestPrice()- results.get(i).getLowestPrice(); 
         }
         return result;
     }
@@ -41,7 +41,7 @@ public class Elaborations {
      * @return whether he has gained or lost
      */
     public int getHowMuch(){
-        int result = (int) (arDays.get(arDays.size()-1).getClosePrice() - arDays.get(0).getOpenPrice());
+        int result = (int) (results.get(results.size()-1).getClosePrice() - results.get(0).getOpenPrice());
         return result;
     }
     
@@ -51,17 +51,17 @@ public class Elaborations {
      */
     public double percentage(){
         int daysGrowsUp = 0;
-        for(int i = 0; i < arDays.size(); i++){
-            if(arDays.get(i).getOpenPrice() < arDays.get(i).getClosePrice()){
+        for(int i = 0; i < results.size(); i++){
+            if(results.get(i).getOpenPrice() < results.get(i).getClosePrice()){
                 daysGrowsUp++;
             }
         }
-        return Double.valueOf(daysGrowsUp/arDays.size()) * 100;
+        return Double.valueOf(daysGrowsUp/results.size()) * 100;
     }
     
     public HashMap<Double, Double> frequentValues(){
         HashMap<Double, Double> hashmap = new HashMap<Double, Double>();
-        for(int i = 0; i < arDays.size(); i++){
+        for(int i = 0; i < results.size(); i++){
             //if()
         }
         return null;
