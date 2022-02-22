@@ -20,8 +20,8 @@ public class Elaborations {
     }
     
     /**
-     * Utilizzo un ciclo for per sommare ad una variabile locale la differenza tra il prezzo più alto e quello più basso
-     * @return la variabile locale che contiene il calcolo del massimo teorico realizzabile
+     * I use a for loop to add the difference between the highest and lowest price to a local variable
+     * @return the local variable that contains the calculation of the theoretical maximum achievable
      */
     public int getTheoreticalMaximum(){
         int result = 0;
@@ -32,8 +32,8 @@ public class Elaborations {
     }
     
     /**
-     * Calcolo di quanto ha guadagnato o perso il titolo borsistico per il periodo richiesto
-     * @return se ha guadagnato o ha perduto
+     * Calculation of how much the stock title has gained or lost for the required period
+     * @return whether he has gained or lost
      */
     public int getHowMuch(){
         int result = arDays.get(arDays.size()-1).getClosePrice() - arDays.get(0).getOpenPrice();
@@ -41,8 +41,8 @@ public class Elaborations {
     }
     
     /**
-     * Calcolo della % dei giorni in cui il titolo borsistico è cresciuto
-     * @return percentuale giorni di crescita
+     * Calculation of the percentage of days in which the stock market has risen
+     * @return percentage of days in which the stock has grown
      */
     public double percentage(){
         int daysGrowsUp = 0;

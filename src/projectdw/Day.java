@@ -20,7 +20,7 @@ public class Day {
     private double volumeWeighted;
 
     /**
-     * Costruttore con tutti i parametri
+     * Constructor with all parameters
      * @param closePrice
      * @param highestPrice
      * @param lowestPrice
@@ -42,7 +42,7 @@ public class Day {
     }
 
     /**
-     * Costruttore di default
+     * Default constructor
      */
     public Day() {
         this(0,0,0,0,0,0,0,0);
@@ -113,8 +113,8 @@ public class Day {
     }   
 
     /**
-     * Stampo e visualizzo le informazioni relative al 'Giorno'
-     * @return gli attributi del giorno
+     * I print and view the information relating to the 'Day'
+     * @return attributes of the day
      */
     public String toString() {
         return "Day:\n" + " - Close Price = " + this.getClosePrice() + "\n - Highest Price = " + this.getHighestPrice() + "\n - Lowest Price = " + this.getLowestPrice() + "\n - Number Of Transactions = " + this.getNumberOfTransactions() + "\n - Open Price = " + this.getOpenPrice() + "\n - Time Stamp = " + this.getTimestamp() + "\n - Trading Volume = " + this.getTradingVolume() + "\n - Volume Weighted = " + this.getVolumeWeighted();
