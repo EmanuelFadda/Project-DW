@@ -15,7 +15,7 @@ import java.net.URL;
  *
  * @author USER
  */
-public class InputSite { //Classe volta alla richiesta dei parametri (dal sito di Torricelli ) per una soccessiva richiesta a Polygon
+public class InputSite { // Class aimed at requesting parameters (from Torricelli site) for a rescue request to Polygon
     private String siteInput;
 
     public InputSite(String siteInput) {
@@ -30,16 +30,16 @@ public class InputSite { //Classe volta alla richiesta dei parametri (dal sito d
         this.siteInput = siteInput;
     }
     
-    public String restCall() throws MalformedURLException, IOException{ //effettua la chiamata rest
-        URL url = new URL(this.getSiteInput()); //prende l'url
+    public String restCall() throws MalformedURLException, IOException{ // make a rest call
+        URL url = new URL(this.getSiteInput()); // get the url
         HttpURLConnection conn = (HttpURLConnection) url.openConnection(); 
-        conn.setRequestMethod("GET"); //setta il tipo della chiamata, in questo caso "get"
-        conn.setRequestProperty("Accept", "application/json"); //setta le proprietà 
+        conn.setRequestMethod("GET"); // set the type of the call, in this case, "get"
+        conn.setRequestProperty("Accept", "application/json"); // set the properties
         if (conn.getResponseCode() != 200) {
                 throw new RuntimeException("Failed : HTTP error code : "+ conn.getResponseCode()); 
         }
-        BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream()))); //inserisce il risultato della risposta nell'oggetto buffered reader
-         //stringa del risultato
+        BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream()))); // put the result of the response into the buffered reader object
+        // result string
         String output=br.readLine();
         if(output != null) {
             conn.disconnect(); 
