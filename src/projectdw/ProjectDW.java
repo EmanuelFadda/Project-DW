@@ -23,7 +23,7 @@ public class ProjectDW {
        PolygonCaller pCaller= new PolygonCaller("Zu3H1W9Hu42COZSkkkb5AxiDBPRfGKg8","AAPL","01/12/2021","31/12/2021");
        /*System.out.println(pCaller.restCallDataStocks());
        System.out.println(pCaller.restCallInfoStocks());*/
-       System.out.println(pCaller.restCallDataStocks());
+       //System.out.println(pCaller.restCallDataStocks());
        
     }
     
