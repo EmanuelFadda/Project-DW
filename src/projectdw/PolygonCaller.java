@@ -76,7 +76,7 @@ public class PolygonCaller { //classe che attraverso i dati presi dal sito nella
         url="https://api.polygon.io/v3/reference/tickers/"+this.stocksTicker+"?apiKey="+this.APIKeyLog;
         return this.restCall(url);
     }
-    private String modifyStringDate(String wrongData){
+    private String modifyStringDate(String wrongData){ //converte le date presi dal sito di torricelli in delle stringhe idonee all'utilizzo dell'API polygon
         String year=new String(wrongData.substring(6,10));
         String month=new String(wrongData.substring(3,5));
         String day= new String(wrongData.substring(0,2));
