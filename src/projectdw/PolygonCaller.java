@@ -15,11 +15,11 @@ import java.net.URL;
  *
  * @author USER
  */
-public class PolygonCaller { //classe che attraverso i dati presi dal sito nella classe InputSite può elaborare un link per effettuare le richieste precise
-    private String APIKeyLog; //key dell'API
-    private String stocksTicker; //nome del titolo
-    private String start; // data inizio
-    private String end; // data fine
+public class PolygonCaller { // class that through the data taken from the site in the InputSite class can process a link to make precise requests
+    private String APIKeyLog; // key of the API
+    private String stocksTicker; //title name
+    private String start; // start date
+    private String end; // end date
 
     public PolygonCaller(String APIKeyLog, String stocksTicker, String start, String end) {
         this.APIKeyLog = APIKeyLog;
@@ -48,16 +48,16 @@ public class PolygonCaller { //classe che attraverso i dati presi dal sito nella
         this.end = end;
     }
     
-    public String restCall(String link) throws MalformedURLException, IOException{ //metodo che attraverso il link ti effettua la chiamata rest
-        URL url = new URL(link); //prende l'url
+    public String restCall(String link) throws MalformedURLException, IOException{ // method that through the link make a rest call
+        URL url = new URL(link); // take the url
         HttpURLConnection conn = (HttpURLConnection) url.openConnection(); 
-        conn.setRequestMethod("GET"); //setta il tipo della chiamata, in questo caso "get"
-        conn.setRequestProperty("Accept", "application/json"); //setta le proprietà 
+        conn.setRequestMethod("GET"); // set the type of the call, in this case "get"
+        conn.setRequestProperty("Accept", "application/json"); // set the properties 
         if (conn.getResponseCode() != 200) {
                 throw new RuntimeException("Failed : HTTP error code : "+ conn.getResponseCode()); 
         }
-        BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream()))); //inserisce il risultato della risposta nell'oggetto buffered reader
-         //stringa del risultato
+        BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream()))); // put the result of the response into the buffered reader object
+        // result string
         String output=br.readLine();
         if(output != null) {
             conn.disconnect(); 
@@ -65,18 +65,18 @@ public class PolygonCaller { //classe che attraverso i dati presi dal sito nella
         return output;
     }
 
-    public String restCallDataStocks() throws IOException{ //ottenimento dei dati del periodo selezionato del titolo borsistico richiesto
+    public String restCallDataStocks() throws IOException{ // obtaining the data of the selected period of the requested stock market
         String url="https://api.polygon.io/v2/aggs/ticker/"+this.stocksTicker+"/range/1/day/"+this.modifyStringDate(this.start)+"/"+this.modifyStringDate(this.end)+"?apiKey="+this.APIKeyLog;
  
         return this.restCall(url);
     }
-    public String restCallInfoStocks() throws IOException{ //ottenimento dei dati del titolo borsistico scelto
+    public String restCallInfoStocks() throws IOException{ // obtaining the data of the chosen stock market
         String url=null;
         //"https://api.polygon.io/v3/reference/tickers/AAPL?apiKey=O7iAXX5ZoaqaMqOzyHA4RPq8LfFw8olK"
         url="https://api.polygon.io/v3/reference/tickers/"+this.stocksTicker+"?apiKey="+this.APIKeyLog;
         return this.restCall(url);
     }
-    private String modifyStringDate(String wrongData){ //converte le date presi dal sito di torricelli in delle stringhe idonee all'utilizzo dell'API polygon
+    private String modifyStringDate(String wrongData){ // converts the dates taken from torricelli site into strings suitable for the use of the polygon API
         String year=new String(wrongData.substring(6,10));
         String month=new String(wrongData.substring(3,5));
         String day= new String(wrongData.substring(0,2));
