@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author USER
+ * @author alexb
  */
 public class HTMLLoaderTest {
     

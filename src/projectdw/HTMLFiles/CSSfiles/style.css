@@ -10,7 +10,12 @@
         
         body {
             background: #ffffff;
+<<<<<<< HEAD
             font: 16px;
+=======
+            line-height: 22px;
+            padding-bottom: 100px;
+>>>>>>> 449164d2fe9a564dcb1ce82df10fc50554588596
             font-family: "Poppins", sans-serif;
             width: 100%;
         }
