@@ -1,3 +1,4 @@
+/*First Graph: Stock Trend*/
 const labels = [
     '01/12/2021',
     '02/12/2021',
@@ -30,9 +31,9 @@ const labels = [
     '29/12/2021',
     '30/12/2021',
     '31/12/2021',
-];
+  ];
 
-const data = {
+  const dataStockMarketTrend = {
     labels: labels,
     datasets: [{
         label: 'Present Value',
@@ -42,21 +43,22 @@ const data = {
         borderColor: 'rgb(164,22,34)',
         data: [1, 1, 8, 1, 3, 7, 6, 7, 6, 1, 6, 8, 1, 8, 7, 1, 1, 9, 8,	9, 5, 10, 4, 3, 5, 2, 9, 3, 8, 3, 6],
     }]
-};
+  };
 
-/*const data2 = {
-    labels: labels,
-    datasets: [{
-        label: 'Present Value',
-        backgroundColor: [
-            'rgb(164,22,34)',
-        ],                
-        borderColor: 'rgb(229,229,229)',
-        data: [1, 1, 8, 1, 3, 7, 6, 7, 6, 1, 6, 8, 1, 8, 7, 1, 1, 9, 8,	9, 5, 10, 4, 3, 5, 2, 9, 3, 8, 3, 6],
-    }]
-};*/
+  const configStockMarketTrend = {
+    type: 'line',
+    data: dataStockMarketTrend,
+    options: {}
+  };
 
-const data2 = {
+  const stockMarketTrend = new Chart(
+    document.getElementById('stockMarketTrend'),
+    configStockMarketTrend
+  );
+
+
+/*Late Graph: Histogram*/
+const dataHistogram = {
     labels: labels,
     datasets: [{
         label: 'My First Dataset',
@@ -83,24 +85,13 @@ const data2 = {
     }]
 };
 
-const config = {
-    type: 'line',
-    data: data,
-    options: {}
-};
-
-const config2 = {
+const configHistogram = {
     type: 'bar',
-    data: data2,
+    data: dataHistogram,
     options: {}
 };
 
-const myChart = new Chart(
-    document.getElementById('myChart'),
-    config
-);
-
-const myChart2 = new Chart(
-    document.getElementById('myChart2'),
-    config2
+const histogram = new Chart(
+    document.getElementById('histogram'),
+    configHistogram
 );
