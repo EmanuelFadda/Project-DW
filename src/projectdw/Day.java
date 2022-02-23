@@ -14,9 +14,14 @@ public class Day {
     private double h;//highest prize
     private double l;//lowest prize
     private double o;//open priza
+    private long t;//
 
     public double getClosePrice() {
         return c;
+    }
+
+    public long getTimeUnixMsec() {
+        return t;
     }
     
     public double getHighestPrice() {
@@ -36,6 +41,6 @@ public class Day {
      * @return informazioni del giorno
      */
     public String toString() {
-        return "Day:\n" + " c = " + this.getClosePrice() + "\n h = " + this.getHighestPrice() + "\n l = " + this.getHighestPrice() + "\n o = " + this.getOpenPrice();
+        return "Day:\n" + " c = " + this.getClosePrice() + "\n h = " + this.getHighestPrice() + "\n l = " + this.getHighestPrice() + "\n o = " + this.getOpenPrice()+"\n t = "+ this.getTimeUnixMsec();
     }
 }

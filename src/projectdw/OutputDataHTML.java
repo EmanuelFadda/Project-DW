@@ -14,5 +14,10 @@ public class OutputDataHTML {
     
     private Elaborations elaborations;
     private InfoStock infoStock;
+
+    @Override
+    public String toString() {
+        return "OutputDataHTML{" + "elaborations=" + elaborations + ", infoStock=" + infoStock + '}';
+    }
     
 }
