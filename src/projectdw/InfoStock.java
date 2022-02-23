@@ -9,8 +9,8 @@ package projectdw;
  * @author USER
  */
 public class InfoStock {
-    private String symbol;
-    private String exchange;
+    private String symbol; 
+    private String exchange;  
     private String name; 
     private String hq_addres; 
     private String description; 

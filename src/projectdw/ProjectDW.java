@@ -6,6 +6,8 @@ package projectdw;
 
 
 import com.google.gson.Gson;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 
 /**
@@ -33,7 +35,13 @@ public class ProjectDW {
          Elaborations elaborations=g.fromJson(str2, Elaborations.class );
        // System.out.println(infoStock);
       OutputDataHTML output=new OutputDataHTML(elaborations,infoStock);
-       System.out.println(output);
+       System.out.println(g.toJson(output));
+       /* FileWriter w;
+        w=new FileWriter("jsonData.json");
+        BufferedWriter b;
+        b=new BufferedWriter (w);*/
+
+     //b.write();
        // System.out.println(elaborations);
        // HTMLLoader a=new HTMLLoader("src\\projectdw\\HTMLFiles\\index.html");
        // a.loadFileHTML();
