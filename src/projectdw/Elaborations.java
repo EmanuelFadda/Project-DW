@@ -17,7 +17,7 @@ public class Elaborations {
     private int theoricalMaximum;
     private int howMuch;
     private double percentage;
-    private HashMap<Double, Double> frequentValues;
+    private HashMap<Integer, Integer> frequentValues;
     
     
     public Elaborations(ArrayList<Day> arDays) {
@@ -61,11 +61,11 @@ public class Elaborations {
         this.percentage = percentage;
     }
 
-    public HashMap<Double, Double> getFrequentValues() {
+    public HashMap<Integer, Integer> getFrequentValues() {
         return frequentValues;
     }
 
-    public void setFrequentValues(HashMap<Double, Double> frequentValues) {
+    public void setFrequentValues(HashMap<Integer, Integer> frequentValues) {
         this.frequentValues = frequentValues;
     }
     
@@ -105,9 +105,13 @@ public class Elaborations {
     }
     
     public void caluculateFrequentValues(){
-        HashMap<Double, Double> hashmap = new HashMap<Double, Double>();
+        HashMap<Integer, Integer> hashmap = new HashMap<Integer, Integer>();
         for(int i = 0; i < results.size(); i++){
-            //if()
+            if(!hashmap.containsKey(results.get(i).getOpenPrice())){
+                hashmap.put((int)results.get(i).getOpenPrice(),1);
+            }else{
+                hashmap.put((int) results.get(i).getOpenPrice(),hashmap.get(results.get(i).getOpenPrice())+1);
+            }
         }
         this.setFrequentValues(hashmap);
     }
