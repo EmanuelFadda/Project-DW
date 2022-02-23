@@ -9,9 +9,9 @@ package projectdw;
  * @author USER
  */
 public class Params {
-    private String ticker;
-    private String starting_date;
-    private String ending_date;
+    private String ticker; //ticker
+    private String starting_date; //starting date of the period analyzed
+    private String ending_date; //ending date of the period analyzed
 
     public Params(String ticker, String starting_date, String ending_date) {
         this.ticker = ticker;
@@ -46,8 +46,6 @@ public class Params {
 
     public void setEnding_date(String ending_date) {
         this.ending_date = ending_date;
-    }
-    
-    
+    }  
     
 }
