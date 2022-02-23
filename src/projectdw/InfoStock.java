@@ -12,12 +12,12 @@ public class InfoStock {
     private String symbol; 
     private String exchange;  
     private String name; 
-    private String hq_addres; 
+    private String hq_address; 
     private String description; 
 
     @Override
     public String toString() {
-        return "InfoStock{" + "symbol=" + symbol + ", exchange=" + exchange + ", name=" + name + ", hq_addres=" + hq_addres + ", description=" + description + '}';
+        return "InfoStock{" + "symbol=" + symbol + ", exchange=" + exchange + ", name=" + name + ", hq_address=" + hq_address + ", description=" + description + '}';
     }
     
 }

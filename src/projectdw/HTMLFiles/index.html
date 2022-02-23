@@ -10,23 +10,17 @@
             integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
             <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <link rel="stylesheet" href="CSSfiles/style.css" />
-        <script type="text/javascript" src="script.js"></script>
     </head>
 
     <body>
         <div class="container">
             <div class="shadow p-3 mb-5 bg-body rounded">
-                <!--Header-->
+                
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <div class="flex-container" style="margin-left: 43%">
                         <div class="container-fluid">
-                            <a class="navbar-brand" href="index.html"><img src="CSSfiles/img/logo.png" alt="Company Logo"
-                                    height="150" width="150" style="cursor: pointer" />
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                                aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
+                            <a class="navbar-brand" href="index.html" ></a><img src="CSSfiles/img/logo.png" alt="Company Logo"
+                                    height="150" width="150" style="cursor: pointer">
                             <div class="collapse navbar-collapse" id="navbarNav">
                                 <ul class="navbar-nav">
                                     <li class="nav-item" style="margin-left: 10px">
@@ -41,35 +35,30 @@
                     </div>
                 </nav>
 
-                <!--Information Box-->
+                
                 <div class="information">
                     <div class="row" style="background: #a41622; margin: 15px 2px 15px 2px">
                         <table>
                             <tr>
                                 <td class="sx" style="text-align: center">
-                                    <h3 style="color: white"><b>AAPL</b></h3>
-                                    <span class="d-inline-block">Nasdaq Global Select</span><br>
-                                    <span class="d-inline-block">Apple Inc.</span><br>
-                                    <span class="d-inline-block">1 Infinite Loop Cupertino CA, 95014</span><br>
-                                    <span class="d-inline-block">USA</span>
+                                    <h3 style="color: white"><b><div id="symbol"></div></b></h3>
+                                    <span class="d-inline-block"><div id="exchange"></div></span><br>
+                                    <span class="d-inline-block"><div id="name"></div></span><br>
+                                    <span class="d-inline-block"><div id="hq_address"></div></span><br>
                                 </td>
                                 <td class="dx">
-                                    <span style="text-align: justify">Apple Inc is designs, manufactures and markets mobile
-                                        communication and media devices and personal computers, and
-                                        sells a variety of related software, services, accessories,
-                                        networking solutions and third-party digital content and
-                                        applications.</span>
+                                    <span style="text-align: justify"><div id="description"></div></span>
                                 </td>
                             </tr>
                         </table>
                     </div>
                 </div>
 
-                <!--Graphs-->
+                
                 <div class="row">
                     <div class="col">
-                        <div style="float:left;">
-                            <canvas id="stockMarketTrend" width="630" height="300"></canvas>
+                        <div>
+                            <canvas id="myChart2" width="630" height="300"></canvas>
                         </div>
                         <div>
                             <p><b>Graph 1:</b> Stock Market Trend</p>
@@ -79,42 +68,41 @@
 
                     </div>
                     <div class="col">
-                        <div style="float:left;">
-                            <canvas id="histogram" width="630" height="300"></canvas>
+                        <div>
+                            <canvas id="myChart" width="630" height="300"></canvas>
                         </div>
                         <div>
                             <p><b>Graph 2:</b> Histogram of Values More Frequent</p>
                             <span style="color: gray"><i>Description:</i> These are the last values updated of the last
                                 call to API.</span>
                         </div>
-
                     </div>
                 </div>
 
-                <!--Elaborations-->
+                
                 <div class="row" style="margin: 50px 0 50px 0">
                     <h2 style="text-align: center">Elaborations:</h2>
                     <div class="col">
                         <div class="text">
                             <h5>Theoretical Maximum:</h5>
-                            <h2>0</h2>
+                            <h2><div id="theoricalMaximum"></div></h2>
                         </div>
                     </div>
                     <div class="col">
                         <div class="text">
-                            <h5>Earnings or Losses:</h5>
-                            <h2>0</h2>
+                            <h5>Percentage of day earnings:</h5>
+                            <h2><div id="percentage"></div></h2>
                         </div>
                     </div>
                     <div class="col">
                         <div class="text">
-                            <h5>Growing Percentage Days:</h5>
-                            <h2>0</h2>
+                            <h5>How much earn this stock:</h5>
+                            <h2><div id="howMuch"></div></h2>
                         </div>
                     </div>
                 </div>
 
-                <!--Footer-->
+                
                 <footer class="footer">
                     <div class="container-fluid">
                         <div class="col-12 my-4 font-weight-bold">
@@ -132,5 +120,6 @@
                 </footer>
             </div>
         </div>
+        <script type="text/javascript" src="script.js"></script>
     </body>
 </html>
