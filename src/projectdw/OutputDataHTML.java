@@ -19,5 +19,15 @@ public class OutputDataHTML {
     public String toString() {
         return "OutputDataHTML{" + "elaborations=" + elaborations + ", infoStock=" + infoStock + '}';
     }
+
+    public OutputDataHTML(Elaborations elaborations, InfoStock infoStock) {
+        this.elaborations = elaborations;
+        this.infoStock = infoStock;
+        this.elaborations.calculateHowMuch();
+        this.elaborations.calculatePercentage();
+        this.elaborations.calculateTheoreticalMaximum();
+        this.elaborations.caluculateFrequentValues();
+    }
+    
     
 }
