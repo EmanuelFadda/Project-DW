@@ -10,10 +10,10 @@ package projectdw;
  * @author difin
  */
 public class Day {
-    private double c;//close prize
-    private double h;//highest prize
-    private double l;//lowest prize
-    private double o;//open priza
+    private double c;//close price
+    private double h;//highest price
+    private double l;//lowest price
+    private double o;//open price
     private long t;//
 
     public double getClosePrice() {
@@ -37,8 +37,8 @@ public class Day {
     }
 
     /**
-     * Metodo utile per il debug
-     * @return informazioni del giorno
+     * Useful method for debugging
+     * @return information of the day
      */
     public String toString() {
         return "Day:\n" + " c = " + this.getClosePrice() + "\n h = " + this.getHighestPrice() + "\n l = " + this.getHighestPrice() + "\n o = " + this.getOpenPrice()+"\n t = "+ this.getTimeUnixMsec();
