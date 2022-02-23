@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body>
+  <body>
     <div class="container">
         <div class="shadow p-3 mb-5 bg-body rounded">
             <!--Header-->
@@ -63,6 +63,8 @@
                     </table>
                 </div>
             </div>
+          </div>
+        </nav>
 
             <!--    INIZIO MANUTENZIONE    -->
 
@@ -129,7 +131,82 @@
                 </div>
             </footer>
         </div>
-    </div>
-</body>
 
+        <!--    INIZIO MANUTENZIONE    -->
+
+        <!--Diagrams-->
+        <div class="row">
+          <div class="col">
+            <!--Qua inserite il primo grafico con il <canvas> (al posto dell'immagine). NON toccate altro.-->
+            <canvas id="myChart" width="700" height="250"></canvas>
+            <p><b>Diagram 1:</b> Stock Market Trend</p>
+            <span style="color: gray"
+              ><i>Description:</i> These are the last values updated of the last
+              call to API.</span
+            >
+          </div>
+          <div class="col">
+            <!--Qua inserite il secondo grafico con il <canvas> (al posto dell'immagine). NON toccate altro.-->
+            <canvas id="myChart2" width="700" height="250"></canvas>
+            <p><b>Diagram 2:</b> Histogram of Values More Frequent</p>
+            <span style="color: gray"
+              ><i>Description:</i> These are the last values updated of the last
+              call to API.</span
+            >
+          </div>
+        </div>
+
+        <!--    TERMINE MANUTENZIONE    -->
+
+        <div class="row" style="margin: 50px 0 50px 0">
+          <h2 style="text-align: center">Elaborations:</h2>
+          <div class="col">
+            <div class="text">
+              <h5>Theoretical Maximum:</h5>
+              <h2>0</h2>
+            </div>
+          </div>
+          <div class="col">
+            <div class="text">
+              <h5>Earnings or Losses:</h5>
+              <h2>0</h2>
+            </div>
+          </div>
+          <div class="col">
+            <div class="text">
+              <h5>Growing Percentage Days:</h5>
+              <h2>0</h2>
+            </div>
+          </div>
+        </div>
+
+        <!--Footer-->
+        <footer class="footer">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12 my-4 font-weight-bold">
+                <img
+                  src="CSSfiles/img/logo.png"
+                  alt="Company Logo"
+                  height="75"
+                  width="75"
+                  style="margin-left: 47%"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div id="copyright">
+                  <span id="copy"
+                    >Copyright © 2022 AEGA Studios. Tutti i diritti
+                    riservati.</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
 </html>
