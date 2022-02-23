@@ -13,6 +13,7 @@
 <body>
     <div class="container">
         <div class="shadow p-3 mb-5 bg-body rounded">
+            <!--Header-->
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="flex-container" style="margin-left: 43%;">
                     <div class="container-fluid">
@@ -36,19 +37,17 @@
                 </div>
             </nav>
 
-            <!--LAVORATE QUA DENTRO-->
-
-            <!--Box Informazioni-->
+            <!--Information Box-->
             <div class="information">
-                <div class="row">
+                <div class="row" style="background: #a41622;margin: 15px 2px 15px 2px;">
                     <table>
                         <tr>
-                            <td class="sx">
-                                <h3>AAPL</h3>
-                                <span>Nasdaq Global Select</span><br>
-                                <span>Apple Inc.</span><br>
-                                <span>1 Infinite Loop Cupertino CA, 95014</span><br>
-                                <span>USA</span><br>
+                            <td class="sx" style="text-align: center;">
+                                <h3 style="color: white;"><b>AAPL</b></h3>
+                                <span class="d-inline-block">Nasdaq Global Select</span><br>
+                                <span class="d-inline-block">Apple Inc.</span><br>
+                                <span class="d-inline-block">1 Infinite Loop Cupertino CA, 95014</span><br>
+                                <span class="d-inline-block">USA</span>
                             </td>
                             <td class="dx">
                                 <span style="text-align: justify;">Apple Inc is designs, manufactures and markets mobile communication and media devices and personal computers, and sells a variety of related software, services, accessories, networking solutions and third-party digital content and applications.</span>
@@ -58,44 +57,65 @@
                 </div>
             </div>
 
-            <!--Grafici-->
+                                                    <!--    INIZIO MANUTENZIONE    -->
+
+            <!--Diagrams-->
             <div class="row">
                 <div class="col">
-                    <!--Qua inserite il primo grafico-->
+                    <!--Qua inserite il primo grafico con il <canvas> (al posto dell'immagine). NON toccate altro.-->
+                    <img src="CSSfiles/img/graficoUno.png" alt="Grafico Uno" height="240" width="600" />
+                    <p><b>Diagram 1:</b> Stock Market Trend</p>
+                    <span style="color:gray;"><i>Description:</i> These are the last values updated of the last call to API.</span>
                 </div>
                 <div class="col">
-                    <!--Qua inserite il secondo grafico-->
+                    <!--Qua inserite il secondo grafico con il <canvas> (al posto dell'immagine). NON toccate altro.-->
+                    <img src="CSSfiles/img/graficoDue.jfif" alt="Grafico Due" height="240" width="600" />
+                    <p><b>Diagram 2:</b> Histogram of Values More Frequent</p>
+                    <span style="color:gray;"><i>Description:</i> These are the last values updated of the last call to API.</span>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col">
-                    <div class="text">
-                        <h3>Theoretical Maximum:</h3><br>
-                        <p>Value</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="text">
-                        <h3>Earnings or Losses:</h3><br>
-                        <p>Value</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="text">
-                        <h3>Growing Percentage Days:</h3><br>
-                        <p>Value</p>
-                    </div>
-                </div>
-            </div>
-        
+                                                    <!--    TERMINE MANUTENZIONE    -->
 
-        <!--<div id="footer">
-            <div id="copyright">
-                <img src="CSSfiles/img/logo.png" alt="Logo Azienda" height="120" width="120" />
-                <h3>Copyright © 2022 AEGA Studios. Tutti i diritti riservati.</h3>
+            <div class="row" style="margin: 50px 0 50px 0;">
+                <h2 style="text-align: center">Elaborations:</h2>
+                <div class="col">
+                    <div class="text">
+                        <h5>Theoretical Maximum:</h5>
+                        <h2>0</h2>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="text">
+                        <h5>Earnings or Losses:</h5>
+                        <h2>0</h2>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="text">
+                        <h5>Growing Percentage Days:</h5>
+                        <h2>0</h2>
+                    </div>
+                </div>
             </div>
-        </div>-->
+
+            <!--Footer-->
+            <footer class="footer">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12 my-4 font-weight-bold">
+                        <img src="CSSfiles/img/logo.png" alt="Company Logo" height="75" width="75" style="margin-left: 47%;"/>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                        <div id="copyright">
+                            <span id="copy">Copyright © 2022 AEGA Studios. Tutti i diritti riservati.</span>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </footer>
         </div>
     </div>
 </body>
