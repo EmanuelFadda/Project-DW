@@ -79,8 +79,18 @@
         #copyright {
             text-align: center;
             color: #292d33;
+            padding-top: 80px;
+            font-family: "Poppins", sans-serif;
         }
 
         #copy{
             color: black;
+        }
+
+        .imgFooter {
+            padding-top: 15px;
+            padding-left: 40px;
+            padding-right: 25px;
+            padding-bottom: 15px;
+            float: left;
         }
