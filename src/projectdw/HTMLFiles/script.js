@@ -12,8 +12,8 @@ document.getElementById('hq_address').innerHTML=obj.infoStock.hq_address;
 document.getElementById('exchange').innerHTML=obj.infoStock.exchange;
 
 
-function getArrayDate(){ //da risolvere
-    let dayDates={}
+function getArrayDate(){ 
+    let dayDates=[]
     for (let i=0;i<obj.elaborations.results.length;i++){
         let realdate = new Date(obj.elaborations.results[i].t);
         dayDates[i]=realdate.getDate()+"/"+realdate.getMonth()+"/"+realdate.getFullYear();
@@ -21,52 +21,18 @@ function getArrayDate(){ //da risolvere
     return dayDates;
 }
 
-let dates=getArrayDate()
-
 function getOpenValue(){
-    let openValues={}
+    let openValues=[]
     for (let i=0;i<obj.elaborations.results.length;i++){
-        openValues[i]=obj.elaborations.results.o;
+        openValues[i]=obj.elaborations.results[i].o;
     }
     return openValues
 }
 let openValues=getOpenValue();
-const labels = [
-    '01/12/2021',
-    '02/12/2021',
-    '03/12/2021',
-    '04/12/2021',
-    '05/12/2021',
-    '06/12/2021',
-    '07/12/2021',
-    '08/12/2021',
-    '09/12/2021',
-    '10/12/2021',
-    '11/12/2021',
-    '12/12/2021',
-    '13/12/2021',
-    '14/12/2021',
-    '15/12/2021',
-    '16/12/2021',
-    '17/12/2021',
-    '18/12/2021',
-    '19/12/2021',
-    '20/12/2021',
-    '21/12/2021',
-    '22/12/2021',
-    '23/12/2021',
-    '24/12/2021',
-    '25/12/2021',
-    '26/12/2021',
-    '27/12/2021',
-    '28/12/2021',
-    '29/12/2021',
-    '30/12/2021',
-    '31/12/2021',
-];
+const labels = getArrayDate()
 
 const data = {
-    labels: dates,
+    labels: labels,
     datasets: [{
         label: 'Present Value',
         backgroundColor: [
@@ -82,7 +48,7 @@ const data2 = {
     labels: labels,
     datasets: [{
         label: 'My First Dataset',
-        data: [1, 1, 8, 1, 3, 7, 6, 7, 6, 1, 6, 8, 1, 8, 7, 1, 1, 9, 8,	9, 5, 10, 4, 3, 5, 2, 9, 3, 8, 3, 6],
+        data: [],
         backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
             'rgba(255, 159, 64, 0.2)',
