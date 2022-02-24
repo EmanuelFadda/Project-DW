@@ -101,7 +101,9 @@ public class Elaborations {
                 daysGrowsUp++;
             }
         }
-        this.setPercentage(Double.valueOf(daysGrowsUp/results.size()) * 100);
+        this.setPercentage((Double.valueOf(daysGrowsUp)/results.size()) * 100);
+
+        
     }
     
     public void caluculateFrequentValues(){
