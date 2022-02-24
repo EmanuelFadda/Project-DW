@@ -11,7 +11,25 @@ document.getElementById('symbol').innerHTML=obj.infoStock.symbol;
 document.getElementById('hq_address').innerHTML=obj.infoStock.hq_address;
 document.getElementById('exchange').innerHTML=obj.infoStock.exchange;
 
+/*Progress Bar*/
+let progressBar = document.querySelector(".circular-progress");
+let valueContainer = document.querySelector(".value-container");
 
+let progressValue = 0;
+let progressEndValue = 100;
+let speed = 300;
+
+let progress = setInterval(() => {
+  progressValue++;
+  valueContainer.textContent = `${progressValue}%`;
+  progressBar.style.background = `conic-gradient(
+      #8b020d ${progressValue * 3.6}deg,
+      #ffcccc ${progressValue * 3.6}deg
+  )`;
+  if (progressValue == progressEndValue) {
+    clearInterval(progress);
+  }
+}, speed);
 
 
 let unorderedkey=(Object.keys(obj.elaborations.frequentValues)); 
@@ -52,7 +70,7 @@ const data = {
     datasets: [{
         label: 'Present Value',
         backgroundColor: [
-            'rgb(229,229,229)',
+            'rgb(248,249,250)',
         ],                
         borderColor: 'rgb(164,22,34)',
         data: openValues,
@@ -63,7 +81,7 @@ const data = {
 const data2 = {
     labels: orderedKey,
     datasets: [{
-        label: 'My First Dataset',
+        label: 'Present Value',
         data: frequentValuesArray,
         backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
@@ -108,5 +126,4 @@ const myChart2 = new Chart(
     document.getElementById('myChart2'),
     config2
 );
-
 
