@@ -12,13 +12,25 @@ document.getElementById('hq_address').innerHTML=obj.infoStock.hq_address;
 document.getElementById('exchange').innerHTML=obj.infoStock.exchange;
 
 
-let dates=getArrayDate()
-function getArrayDate(){
-    for (let i=0;i<obj.elaborations.results.lenght;i++){
-
+function getArrayDate(){ //da risolvere
+    let dayDates={}
+    for (let i=0;i<obj.elaborations.results.length;i++){
+        let realdate = new Date(obj.elaborations.results[i].t);
+        dayDates[i]=realdate.getDate()+"/"+realdate.getMonth()+"/"+realdate.getFullYear();
     }
+    return dayDates;
 }
 
+let dates=getArrayDate()
+
+function getOpenValue(){
+    let openValues={}
+    for (let i=0;i<obj.elaborations.results.length;i++){
+        openValues[i]=obj.elaborations.results.o;
+    }
+    return openValues
+}
+let openValues=getOpenValue();
 const labels = [
     '01/12/2021',
     '02/12/2021',
@@ -54,14 +66,14 @@ const labels = [
 ];
 
 const data = {
-    labels: labels,
+    labels: dates,
     datasets: [{
         label: 'Present Value',
         backgroundColor: [
             'rgb(229,229,229)',
         ],                
         borderColor: 'rgb(164,22,34)',
-        data: [1, 1, 8, 1, 3, 7, 6, 7, 6, 1, 6, 8, 1, 8, 7, 1, 1, 9, 8,	9, 5, 10, 4, 3, 5, 2, 9, 3, 8, 3, 6],
+        data: openValues,
     }]
 };
 
