@@ -70,6 +70,10 @@
             color: #a41622;
         }
 
+        #description{
+            margin-left: 0;
+        }
+
         /*Footer Information*/
         .footer{
             background: #c2c2c2;
