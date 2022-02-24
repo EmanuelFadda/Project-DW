@@ -71,6 +71,11 @@
             width: 100%;
         }
 
+        #link:hover {
+            background-color: none;
+            text-decoration: none;
+        }
+
         /*Header Properties*/
         .flex-container {
             display: flex;
