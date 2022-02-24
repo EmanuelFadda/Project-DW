@@ -53,8 +53,7 @@ public class PolygonCaller { // class that through the data taken from the site 
     public String restCallDataStocks() throws IOException{ // obtaining the data of the selected period of the requested stock market
         String url="https://api.polygon.io/v2/aggs/ticker/"+this.params.getTicker()+
                 "/range/1/day/"+this.modifyStringDate("01/12/2021")+                            //resolve this bug, probably is the params "range"
-                "/"+this.modifyStringDate("31/12/2021")+"?apiKey="+this.APIKeyLog;
-        System.out.println(url);
+                "/"+this.modifyStringDate("31/12/2021")+"?apiKey="+this.APIKeyLog;;
         return this.restCall(url);
     }
     public String restCallInfoStocks() throws IOException{ // obtaining the data of the chosen stock market
@@ -67,7 +66,6 @@ public class PolygonCaller { // class that through the data taken from the site 
         String year=new String(wrongData.substring(6,10));
         String month=new String(wrongData.substring(3,5));
         String day= new String(wrongData.substring(0,2));
-        //System.out.println(year+"-"+month+"-"+day);
         return year+"-"+month+"-"+day;
     }
 }

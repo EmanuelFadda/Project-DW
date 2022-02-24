@@ -2,8 +2,10 @@ package projectdw;
 
 import com.google.gson.Gson;
 import java.awt.Desktop;
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
@@ -44,15 +46,18 @@ public class HTMLLoader {
     public void  uploadJSONData(String JSONData) throws FileNotFoundException, IOException{
       String filePath = "src\\\\projectdw\\\\HTMLFiles\\\\script.js";
       Scanner sc = new Scanner(new File(filePath));
+      Scanner sc2= new Scanner(new File(filePath));
       StringBuffer buffer = new StringBuffer();
       while (sc.hasNextLine()) {
          buffer.append(sc.nextLine()+System.lineSeparator());
       }
       String fileContents = buffer.toString();
       sc.close();
-      String oldLine = "let JSONData=''";
+      //let JSONData=''
+      String oldLine=sc2.nextLine();
+        System.out.println(oldLine);
       String newLine = "let JSONData='"+JSONData+"'";
-      fileContents = fileContents.replaceAll(oldLine, newLine);
+      fileContents = fileContents.replace(oldLine, newLine);
       FileWriter writer = new FileWriter(filePath);
       writer.append(fileContents);
       writer.flush();
