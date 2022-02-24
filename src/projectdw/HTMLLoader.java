@@ -55,7 +55,6 @@ public class HTMLLoader {
       sc.close();
       //let JSONData=''
       String oldLine=sc2.nextLine();
-        System.out.println(oldLine);
       String newLine = "let JSONData='"+JSONData+"'";
       fileContents = fileContents.replace(oldLine, newLine);
       FileWriter writer = new FileWriter(filePath);
