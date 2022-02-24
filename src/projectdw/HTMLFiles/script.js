@@ -3,7 +3,7 @@ let JSONData='{"elaborations":{"results":[{"c":164.77,"h":170.3,"l":164.53,"o":1
 /*First Graph: Stock Trend*/
 const obj=JSON.parse(JSONData);
 document.getElementById('howMuch').innerHTML=obj.elaborations.howMuch;
-document.getElementById('percentage').innerHTML=obj.elaborations.percentage;
+document.getElementById('percentage').innerHTML=parseInt( obj.elaborations.percentage);
 document.getElementById('theoricalMaximum').innerHTML=obj.elaborations.theoricalMaximum;
 document.getElementById('name').innerHTML=obj.infoStock.name;
 document.getElementById('description').innerHTML=obj.infoStock.description;
@@ -11,6 +11,19 @@ document.getElementById('symbol').innerHTML=obj.infoStock.symbol;
 document.getElementById('hq_address').innerHTML=obj.infoStock.hq_address;
 document.getElementById('exchange').innerHTML=obj.infoStock.exchange;
 
+
+
+
+let unorderedkey=(Object.keys(obj.elaborations.frequentValues)); 
+let orderedKey=unorderedkey.sort(function(a, b){return a - b});
+function getFrequencyvalues(){
+    let frequency=[]
+    for (let i=0;i<orderedKey.length;i++){
+        frequency[i]=obj.elaborations.frequentValues[orderedKey[i]]
+    }
+    return frequency
+}
+let frequentValuesArray=getFrequencyvalues()
 
 function getArrayDate(){ 
     let dayDates=[]
@@ -28,8 +41,11 @@ function getOpenValue(){
     }
     return openValues
 }
+
 let openValues=getOpenValue();
 const labels = getArrayDate()
+
+
 
 const data = {
     labels: labels,
@@ -45,10 +61,10 @@ const data = {
 
 
 const data2 = {
-    labels: labels,
+    labels: orderedKey,
     datasets: [{
         label: 'My First Dataset',
-        data: [],
+        data: frequentValuesArray,
         backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
             'rgba(255, 159, 64, 0.2)',
