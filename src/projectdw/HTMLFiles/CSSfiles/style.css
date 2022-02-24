@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
-
         /*General Page Properties*/
         *,
         *:before,
@@ -71,6 +70,36 @@
             text-decoration: none;
         }
 
+        /*Progress Bar*/
+        .circular-progress {
+            position: relative;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            margin-top: 33px;
+            margin-left: 300px;
+            right: 10px;
+        }
+
+        .circular-progress:before {
+            content: "";
+            position: absolute;
+            height: 84%;
+            width: 84%;
+            background-color: #ffffff;
+            border-radius: 50%;
+        }
+
+        .value-container {
+            position: relative;
+            font-family: "Poppins", sans-serif;
+            font-size: 18px;
+            color: #a41622;
+            text-align: right;
+        }
+
         /*Header Properties*/
         .flex-container {
             display: flex;
@@ -92,17 +121,12 @@
         } */
         
         /*Center Page Properties*/
-        td {
-            width: 50%;
-            box-sizing: border-box;
-            margin: 10px;
-        }
 
         td.sx {
             border-right: 1px solid #000;
             padding-right: 20px;
             margin: 10px;
-            width: 30%;
+            width: 35%;
         }
 
         td.dx {
@@ -111,7 +135,7 @@
         }
 
         .text{
-            border: 5px solid #a41622;
+            border: 3px solid #a41622;
             border-radius: 3px;
             text-align: center;
             color: #a41622;
