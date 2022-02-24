@@ -52,7 +52,7 @@
             padding: 0 10px;
         }
 
-        a:after{
+        #elab:after{
             content: "";
             position: absolute;
             background-color: #a41622;
@@ -63,11 +63,11 @@
             transition: 0.3s;
         }
 
-        a:hover{
+        #elab:hover{
             color: black;
         }
         
-        a:hover:after{
+        #elab:hover:after{
             width: 100%;
         }
 
