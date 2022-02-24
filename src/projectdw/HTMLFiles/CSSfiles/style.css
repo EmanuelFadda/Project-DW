@@ -37,7 +37,7 @@
 
         .navbar a{
             color: #292d33;
-            text-transform: uppercase; 
+            text-transform: uppercase;
         }
 
         .navbar:hover{
@@ -68,6 +68,10 @@
             border-radius: 3px;
             text-align: center;
             color: #a41622;
+        }
+
+        #description{
+            margin-left: 0;
         }
 
         /*Footer Information*/
