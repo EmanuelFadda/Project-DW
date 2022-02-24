@@ -89,10 +89,10 @@
         }
 
         .text{
-            border: 2px solid #a41622;
+            border: 5px solid #a41622;
             border-radius: 3px;
             text-align: center;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            color: #a41622;
         }
 
         /*Footer Information*/
