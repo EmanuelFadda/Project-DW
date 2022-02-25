@@ -35,11 +35,6 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="toggle-container">
-                        <input type="checkbox" id="toggle" name="toggle" /><label
-                            for="toggle"
-                        ></label>
-                    </div>
                 </div>
             </div>
         </nav>
@@ -210,15 +205,10 @@
 </div>
 <script type="text/javascript" src="script.js"></script>
 <script>
-    const toggle = document.getElementById("toggle");
-
-toggle.addEventListener("change", (e) => {
-    document.body.classList.toggle("dark", e.target.checked);
-});
 
 function stopRefresh(){
     
-    document.getElementById("metaAutoRefresh").setAttribute("content", "7200");
+    document.getElementById("autoRefresh").setAttribute("content", "7200");
     
 }
 function downloadChart1(){

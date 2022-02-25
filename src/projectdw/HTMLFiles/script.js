@@ -54,18 +54,17 @@ function getAllOrderedKey(){
 }
 function  getAllFrequencyValues(){
     let allOrderedFrequency=[]
-    let count;
+   
     for (let i=0;i<AllOrderedKey.length;i++){
-        count=0
+        
         for (let j=0;j<orderedKey.length;j++){
+            
             if (AllOrderedKey[i]==orderedKey[j]){
-                count++
-
+                allOrderedFrequency[i]=obj.elaborations.frequentValues[orderedKey[j]]
             }
         }
-        allOrderedFrequency[i]=count;
+
     }
-    console.log(allOrderedFrequency)
     return allOrderedFrequency
 }
 
@@ -129,10 +128,10 @@ function getFrequencyvalues(){
 let frequentValuesArray=getFrequencyvalues()
 
 const data2 = {
-    labels: orderedKey,
+    labels: AllOrderedKey,
     datasets: [{
         label: 'Open Values Frequency',
-        data: frequentValuesArray,
+        data: AllFrequencyValues,
         backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
             'rgba(255, 159, 64, 0.2)',
