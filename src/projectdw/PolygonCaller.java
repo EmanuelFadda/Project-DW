@@ -52,13 +52,12 @@ public class PolygonCaller { // class that through the data taken from the site 
 
     public String restCallDataStocks() throws IOException{ // obtaining the data of the selected period of the requested stock market
         String url="https://api.polygon.io/v2/aggs/ticker/"+this.params.getTicker()+
-                "/range/1/day/"+this.modifyStringDate("01/12/2021")+                            //resolve this bug, probably is the params "range"
-                "/"+this.modifyStringDate("31/12/2021")+"?apiKey="+this.APIKeyLog;;
+                "/range/1/day/"+this.modifyStringDate(this.params.getStarting_date())+                            //resolve this bug, probably is the params "range"
+                "/"+this.modifyStringDate(this.params.getEnding_date())+"?apiKey="+this.APIKeyLog;;
         return this.restCall(url);
     }
     public String restCallInfoStocks() throws IOException{ // obtaining the data of the chosen stock market
         String url=null;
-       // url="https://api.polygon.io/v1/meta/symbols/AAPL/company?apiKey=O7iAXX5ZoaqaMqOzyHA4RPq8LfFw8olK";
         url="https://api.polygon.io/v1/meta/symbols/"+this.params.getTicker()+"/company?apiKey="+this.APIKeyLog;
         return this.restCall(url);
     }

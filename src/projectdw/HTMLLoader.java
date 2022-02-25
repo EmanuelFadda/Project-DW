@@ -64,6 +64,7 @@ public class HTMLLoader {
     
     public void loadFileHTML(OutputDataHTML output) throws IOException{
         Gson g=new Gson();
+        this.uploadJSONData("");
         this.uploadJSONData(g.toJson(output));
         File file=new File(path);
         Desktop desk = Desktop.getDesktop();

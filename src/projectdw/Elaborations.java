@@ -109,11 +109,12 @@ public class Elaborations {
     public void caluculateFrequentValues(){
         HashMap<Integer, Integer> hashmap = new HashMap<Integer, Integer>();
         for(int i = 0; i < results.size(); i++){
-            if(hashmap.get(results.get(i).getOpenPrice())==null){
-                hashmap.put((int)results.get(i).getOpenPrice(),1);
-                System.out.println("projectdw.Elaborations.caluculateFrequentValues()");
+            int key=(int)results.get(i).getOpenPrice();
+            if(hashmap.get(key)==null){
+                hashmap.put(key,1);
+                
             }else{
-                hashmap.put((int) results.get(i).getOpenPrice(),hashmap.get(results.get(i).getOpenPrice())+1);
+                hashmap.put(key,hashmap.get(key)+1);
             }
         }
         
