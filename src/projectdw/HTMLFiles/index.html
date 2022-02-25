@@ -14,23 +14,27 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="shadow p-3 bg-body rounded">
-            <nav class="navbar navbar-expand-lg navbar-light" style="background: #e0e0e0;">
-                <div class="flex-container" style="margin-left: 43%">
-                    <div class="container-fluid">
-                        <a href="index.html"><img src="CSSfiles/img/logo.png" alt="Company Logo" height="150" width="150"
+<div class="container">
+<video autoplay muted loop id="video">
+    <source src="video.mp4" style="margin-left: 110px;" type="video/mp4">
+</video>
+
+    <div class="shadow p-3 bg-body rounded">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background: #dfd2d2;">
+            <div class="flex-container" style="margin-left: 43%">
+                <div class="container-fluid">
+                    <a href="index.html"><img src="CSSfiles/img/logo.png" alt="Company Logo" height="150" width="150"
                             style="cursor:pointer;"></a>
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav">
-                                <li class="nav-item" style="margin-top: 20px;margin-left: 7px;">
-                                    <a id="elab" href="#elaborations">ELABORATIONS</a>
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item" style="margin-top: 20px;margin-left: 7px;">
+                                <a id="elab" href="#elaborations">ELABORATIONS</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </nav>
+            </div>
+        </nav>
 
             <div class="information">
                 <div class="row" style="background: #a41622; margin: 15px 2px 15px 2px">
@@ -61,9 +65,9 @@
             </div>
 
             <hr>
- 
-            <div style="color: #a41622;">Period Analyzed: <div id="dates" style="color: #000;"></div></div>
-            
+
+            <div style="color: #a41622;">Period Analyzed: <div id="dates" style="color: #000;"></div>
+            </div>
 
             <div class="row">
                 <h2 style="text-align:center;">Graphs</h2>
@@ -73,8 +77,7 @@
                     </div>
                     <div>
                         <p><b>Graph 1:</b> Stock Market Trend</p>
-                        <span style="color: gray"><i>Description:</i> These are the last values updated of the last
-                            call to API.</span>
+                        <span style="color: gray"><i>Description:</i> These are the last values updated of the last call to API.</span>
                     </div>
                 </div>
 
@@ -84,8 +87,7 @@
                     </div>
                     <div>
                         <p><b>Graph 2:</b> Histogram of Values More Frequent</p>
-                        <span style="color: gray"><i>Description:</i> These are the last values updated of the last
-                            call to API.</span>
+                        <span style="color: gray"><i>Description:</i> These are the last values updated of the last call to API.</span>
                     </div>
                 </div>
             </div>
@@ -100,7 +102,7 @@
                     <div class="text">
                         <h5>Theoretical Maximum:</h5>
                         <h2>
-                            <div id="theoricalMaximum"></div>
+                            <div style="display: inline-block;" id="theoricalMaximum"></div> USD
                         </h2>
                     </div>
                 </div>
@@ -108,7 +110,7 @@
                     <div class="text">
                         <h5>Percentage of day earnings:</h5>
                         <h2>
-                            <div style="display: inline-block;" id="percentage"></div>%
+                            <div style="display: inline-block;" id="percentage"></div> %
                         </h2>
                     </div>
                 </div>
@@ -116,15 +118,13 @@
                     <div class="text">
                         <h5>How much earn this stock:</h5>
                         <h2>
-                            <div id="howMuch"></div>
+                            <div style="display: inline-block;" id="howMuch"></div> USD
                         </h2>
                     </div>
                 </div>
             </div>
 
-            
-
-            <footer class="text-center text-lg-start" style="height:120px;background:#e0e0e0">
+            <footer class="text-center text-lg-start" style="height:120px;background:#DDD8DA">
                 <div class="row align-items-center">
                     <div class="col" style="padding-top: 33px;padding-left: 50px;">
                         <img src="CSSfiles/img/logo.png" height="50px" width="50px">
@@ -143,9 +143,10 @@
                     </div>
                 </div>
             </footer>
-        </div>
     </div>
-    <script type="text/javascript" src="script.js"></script>
+</div>
+<script type="text/javascript" src="script.js"></script>
+
 </body>
 
 </html>
