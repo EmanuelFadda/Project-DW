@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+        
         /*General Page Properties*/
         *,
         *:before,
@@ -9,8 +10,8 @@
             text-decoration: none;
             box-sizing: border-box;
         }
-
-        #video{
+        /* Video Properties */
+        #video {
             position:fixed;
             left:0;
             top:0;
@@ -20,38 +21,23 @@
             height:auto;
             z-index:-100;
             visibility: visible;
-            /*position:absolute;
-            overflow: hidden;
-            width:100% !important;
-            height:100% !important;
-            object-fit: cover;
-            z-index: -100;*/
-            filter: blur(30px);
-            -webkit-filter: blur(30px);
-            filter: opacity(30px);
-            -webkit-filter: opacity(30px);
+            filter: blur(10px);
+            -webkit-filter: blur(10px);
         }
         
         body {
             background: #ffffff;
-            /* background: url(video.mp4); */
             font: 16px;
             font-family: "Poppins", sans-serif;
             width: 100%;
         }
 
-        a{
-            text-decoration: none;
-            color: black;
-        }
-
-        span{
+        span {
             color: white;
         }
 
         /* Navbar Properties */
-
-        nav{
+        nav {
             height: 250px;
             display: flex;
             align-items: center;
@@ -59,7 +45,7 @@
             margin: auto;
         }
 
-        a{
+        a {
             position: relative;
             text-decoration: none;
             font-family: 'Poppins',sans-serif;
@@ -69,7 +55,7 @@
             padding: 0 10px;
         }
 
-        #elab:after{
+        #elab:after {
             content: "";
             position: absolute;
             background-color: #a41622;
@@ -80,11 +66,11 @@
             transition: 0.3s;
         }
 
-        #elab:hover{
+        #elab:hover {
             color: black;
         }
         
-        #elab:hover:after{
+        #elab:hover:after {
             width: 100%;
         }
 
@@ -132,19 +118,8 @@
             height: 200px;
             text-align: center;
         }
-
-        /* .navbar a{
-            color: #292d33;
-            text-transform: uppercase;
-        }
-
-        .navbar:hover{
-            background: #292d33;
-            color: white;
-        } */
         
         /*Center Page Properties*/
-
         td.sx {
             border-right: 1px solid #000;
             padding-right: 20px;
@@ -157,19 +132,19 @@
             margin: 10px;
         }
 
-        .text{
+        .text {
             border: 3px solid #a41622;
             border-radius: 3px;
             text-align: center;
             color: #a41622;
         }
 
-        #description{
+        #description {
             margin-left: 0;
         }
 
         /*Footer Information*/
-        .footer{
+        .footer {
             background: #c2c2c2;
             height: 100px;
             margin-top: 20px;
@@ -182,6 +157,6 @@
             font-family: "Poppins", sans-serif;
         }
 
-        #copy{
+        #copy {
             color: black;
         }
