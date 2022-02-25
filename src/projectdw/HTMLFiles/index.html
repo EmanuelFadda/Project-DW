@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="CSSfiles/img/logoIco.ico" />
     <title>ProjectDW - Team 2A</title>
-    <meta http-equiv="refresh" content="30">
+    <meta id="autoRefresh" http-equiv="refresh" content="30">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -81,31 +81,38 @@
                 <h2 style="text-align:center;">Graphs</h2>
                 <div class="col">
                     <div>
-                        <canvas id="myChart" width="630" height="300"></canvas>
+                        <canvas id="myChart" width="400" height="200"></canvas>
                     </div>
                     <div>
                         <p><b>Graph 1:</b> Stock Market Trend</p>
-                        <button type="button" class="btn p-1 " style="border: 1px solid gainsboro;" data-toggle="modal" data-target="#exampleModal">
+                        <button onclick="stopRefresh()" type="button" class="btn p-1 " style="border: 1px solid gainsboro;" data-toggle="modal" data-target="#Modal1">
                             See more
                         </button>                          
                     </div>
                 </div>
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
+                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="Modal1" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
+                          <h5 class="modal-title" id="exampleModalLabel">Stock Market Trend</h5>
+                          </div>
                         <div class="modal-body">
-                          ...
+                            <canvas id="myChartModal" width="1500" height="700"></canvas>
+                            <hr>
+                            <span style="color: gray"><i>These are the last values updated of the last call to API.</i></span>
                         </div>
                         <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
+                            <div>
+                            <button  type="button" class="btn btn-danger" onclick="downloadChart1()">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                    width="24" height="24"
+                                    viewBox="0 0 172 172"
+                                    style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M78.83333,14.33333c-3.956,0 -7.16667,3.21067 -7.16667,7.16667v57.33333h-25.08333c-1.97902,0 -3.58333,1.60431 -3.58333,3.58333c0.00014,0.95031 0.37777,1.86164 1.0498,2.53353c0.07162,0.07315 0.14634,0.1432 0.22396,0.20995l36.58919,34.50359l0.23795,0.22396c1.32656,1.24737 3.07819,1.94302 4.89909,1.94564c1.8209,-0.00261 3.57253,-0.69826 4.89909,-1.94564l0.09798,-0.08399c0.02354,-0.02782 0.04687,-0.05581 0.06998,-0.08399l36.5752,-34.48958c0.07258,-0.06249 0.14262,-0.12786 0.20996,-0.19597l0.05599,-0.04199c0.01411,-0.01388 0.02811,-0.02788 0.042,-0.04199c0.67204,-0.6719 1.04966,-1.58323 1.0498,-2.53353c0,-1.97902 -1.60431,-3.58333 -3.58333,-3.58333h-25.08333v-57.33333c0,-3.956 -3.21067,-7.16667 -7.16667,-7.16667h-7.16667zM21.5,143.33333c-2.58456,-0.03655 -4.98858,1.32136 -6.29153,3.55376c-1.30295,2.2324 -1.30295,4.99342 0,7.22582c1.30295,2.2324 3.70697,3.59031 6.29153,3.55376h129c2.58456,0.03655 4.98858,-1.32136 6.29153,-3.55376c1.30295,-2.2324 1.30295,-4.99342 0,-7.22582c-1.30295,-2.2324 -3.70697,-3.59031 -6.29153,-3.55376z"></path></g></g></svg></button>
+                            </div>
+                            <button data-dismiss="modal" type="button" class="btn " style="border: 1px solid gainsboro;" >
+                                Close
+                            </button>   
+                         </div>
                       </div>
                     </div>
                   </div>
@@ -115,9 +122,37 @@
                     </div>
                     <div>
                         <p><b>Graph 2:</b> Histogram of Values More Frequent</p>
-                        <span style="color: gray"><i>Description:</i> These are the last values updated of the last call to API.</span>
+                        <button onclick="stopRefresh()" type="button" class="btn p-1 " style="border: 1px solid gainsboro;" data-toggle="modal" data-target="#Modal2">
+                            See more
+                        </button>   
                     </div>
                 </div>
+                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="Modal2" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Histogram of Values More Frequent</h5>
+                          </div>
+                        <div class="modal-body">
+                            <canvas id="myChartModal2" width="1500" height="700"></canvas>
+                            <hr>
+                            <span style="color: gray"><i>These are the last values updated of the last call to API.</i></span>
+                        </div>
+                        <div class="modal-footer">
+                            <div>
+                            <button  type="button" class="btn btn-danger" onclick="downloadChart2()">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                    width="24" height="24"
+                                    viewBox="0 0 172 172"
+                                    style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M78.83333,14.33333c-3.956,0 -7.16667,3.21067 -7.16667,7.16667v57.33333h-25.08333c-1.97902,0 -3.58333,1.60431 -3.58333,3.58333c0.00014,0.95031 0.37777,1.86164 1.0498,2.53353c0.07162,0.07315 0.14634,0.1432 0.22396,0.20995l36.58919,34.50359l0.23795,0.22396c1.32656,1.24737 3.07819,1.94302 4.89909,1.94564c1.8209,-0.00261 3.57253,-0.69826 4.89909,-1.94564l0.09798,-0.08399c0.02354,-0.02782 0.04687,-0.05581 0.06998,-0.08399l36.5752,-34.48958c0.07258,-0.06249 0.14262,-0.12786 0.20996,-0.19597l0.05599,-0.04199c0.01411,-0.01388 0.02811,-0.02788 0.042,-0.04199c0.67204,-0.6719 1.04966,-1.58323 1.0498,-2.53353c0,-1.97902 -1.60431,-3.58333 -3.58333,-3.58333h-25.08333v-57.33333c0,-3.956 -3.21067,-7.16667 -7.16667,-7.16667h-7.16667zM21.5,143.33333c-2.58456,-0.03655 -4.98858,1.32136 -6.29153,3.55376c-1.30295,2.2324 -1.30295,4.99342 0,7.22582c1.30295,2.2324 3.70697,3.59031 6.29153,3.55376h129c2.58456,0.03655 4.98858,-1.32136 6.29153,-3.55376c1.30295,-2.2324 1.30295,-4.99342 0,-7.22582c-1.30295,-2.2324 -3.70697,-3.59031 -6.29153,-3.55376z"></path></g></g></svg></button>
+                            </div>
+                            <button data-dismiss="modal" type="button" class="btn " style="border: 1px solid gainsboro;" >
+                                Close
+                            </button>   
+                         </div>
+                      </div>
+                    </div>
+                  </div>
             </div>
 
             <hr>
@@ -180,6 +215,27 @@
 toggle.addEventListener("change", (e) => {
     document.body.classList.toggle("dark", e.target.checked);
 });
+
+function stopRefresh(){
+    
+    document.getElementById("metaAutoRefresh").setAttribute("content", "7200");
+    
+}
+function downloadChart1(){
+    var canvas = document.getElementById("myChartModal");
+    var anchor = document.createElement("a");
+    anchor.href = canvas.toDataURL("image/jpeg");
+    anchor.download = "StockValues.jpeg";
+    anchor.click();
+    
+}
+function downloadChart2(){
+    var canvas = document.getElementById("myChartModal2");
+    var anchor = document.createElement("a");
+    anchor.href = canvas.toDataURL("image/jpeg");
+    anchor.download = "FrequencyValues.jpeg";
+    anchor.click();
+}
 </script>
 
 </body>
