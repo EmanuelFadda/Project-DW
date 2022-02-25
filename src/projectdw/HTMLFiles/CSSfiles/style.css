@@ -21,8 +21,8 @@
             height:auto;
             z-index:-100;
             visibility: visible;
-            filter: blur(10px);
-            -webkit-filter: blur(10px);
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
         }
         
         body {
