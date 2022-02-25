@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
         /*General Page Properties*/
         *,
         *:before,
@@ -10,16 +10,27 @@
             box-sizing: border-box;
         }
 
-        /* VIDEO */
-        /* #video{
-            position: absolute;
+        #video{
+            position:fixed;
+            left:0;
             top:0;
-            left: 0;
-            border:1px solid black;
-            min-width: 100%;
-            min-height: 100%;
-            z-index: 0;   
-        } */
+            min-width:100%;
+            min-height:100%;
+            width:auto;
+            height:auto;
+            z-index:-100;
+            visibility: visible;
+            /*position:absolute;
+            overflow: hidden;
+            width:100% !important;
+            height:100% !important;
+            object-fit: cover;
+            z-index: -100;*/
+            filter: blur(30px);
+            -webkit-filter: blur(30px);
+            filter: opacity(30px);
+            -webkit-filter: opacity(30px);
+        }
         
         body {
             background: #ffffff;
