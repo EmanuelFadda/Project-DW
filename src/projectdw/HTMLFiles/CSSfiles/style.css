@@ -21,8 +21,8 @@
             height:auto;
             z-index:-100;
             visibility: visible;
-            filter: blur(10px);
-            -webkit-filter: blur(10px);
+            filter: blur(5px);
+            -webkit-filter: blur(5px);
         }
         
         body {
@@ -49,7 +49,7 @@
             position: relative;
             text-decoration: none;
             font-family: 'Poppins',sans-serif;
-            color: #a0a0a0;
+            color: #444444;
             font-size: 18px;
             letter-spacing: 0.5px;
             padding: 0 10px;
