@@ -31,7 +31,7 @@ public class ProjectDW {
       HTMLLoader html =new HTMLLoader("src\\\\projectdw\\\\HTMLFiles\\\\index.html");
       html.loadFileHTML(output);
       while(true){
-          Thread.sleep(30000);
+          Thread.sleep(28000);
           s1=inputSite.restCall();
           pCaller= new PolygonCaller("Zu3H1W9Hu42COZSkkkb5AxiDBPRfGKg8",g.fromJson(s1, Params.class));
           str1=pCaller.restCallInfoStocks();
